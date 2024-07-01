@@ -1,0 +1,1 @@
+portofolio SQA okilani
