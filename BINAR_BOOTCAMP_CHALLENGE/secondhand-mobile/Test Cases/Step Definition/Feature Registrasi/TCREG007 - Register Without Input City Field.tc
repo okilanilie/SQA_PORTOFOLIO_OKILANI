@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TCREG007 - Register Without Input City Field</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>4d107fa6-2ded-409f-8613-5d2611c59a90</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TCPRO004 - User update their profile city</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>300ef4be-58c8-4f61-866e-927c7507cc85</testCaseGuid>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>003a3323-a286-4138-9909-d35fcf447b2b</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>'Bogor'</defaultValue>
+      <description></description>
+      <id>003a3323-a286-4138-9909-d35fcf447b2b</id>
+      <masked>false</masked>
+      <name>city</name>
+   </variable>
+</TestCaseEntity>

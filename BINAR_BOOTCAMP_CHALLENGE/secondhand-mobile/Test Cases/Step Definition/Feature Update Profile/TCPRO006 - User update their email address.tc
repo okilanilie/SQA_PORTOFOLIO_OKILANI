@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TCPRO006 - User update their email address</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>d5bbf32c-16f3-45a5-aba1-0d94833806c6</testCaseGuid>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>0276b484-4ebb-498d-8bfc-ab91331f9389</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>'sabrina123@mail.com'</defaultValue>
+      <description></description>
+      <id>0276b484-4ebb-498d-8bfc-ab91331f9389</id>
+      <masked>false</masked>
+      <name>email</name>
+   </variable>
+</TestCaseEntity>

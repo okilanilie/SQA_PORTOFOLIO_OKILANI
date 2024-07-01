@@ -1,0 +1,765 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Update Profile Test Suites (1)" time="108.746" tests="8" failures="0" errors="0">
+   <testsuite name="Update Profile Test Suites (1)" tests="8" failures="0" errors="0" time="108.746" skipped="0" timestamp="2024-01-31 22:09:58" hostname="Lenovo - 192.168.0.29" id="Test Suites/Test Suites/Update Profile Test Suites (1)">
+      <properties>
+         <property name="deviceName" value=""/>
+         <property name="devicePlatform" value=""/>
+         <property name="logFolder" value="D:\\OKILANI\\SQA BOOTCAMP\\BINAR\\PLATINUM CHALLENGE\\secondhand-web\\Reports\\20240131_220946\\Test Suites\\Update Profile Test Suites (1)\\20240131_220946"/>
+         <property name="logFiles" value="D:\\OKILANI\\SQA BOOTCAMP\\BINAR\\PLATINUM CHALLENGE\\secondhand-web\\Reports\\20240131_220946\\Test Suites\\Update Profile Test Suites (1)\\20240131_220946\\execution0.log"/>
+         <property name="attachments" value=""/>
+         <property name="hostName" value="Lenovo - 192.168.0.29"/>
+         <property name="os" value="Windows 11 64bit"/>
+         <property name="katalonVersion" value="9.0.0.212"/>
+         <property name="browser" value="Firefox 120.0"/>
+         <property name="hostAddress" value="192.168.0.29"/>
+         <property name="sessionId" value="4983de43-38d3-4188-8c52-da761ded0af3"/>
+         <property name="seleniumVersion" value="3.141.59"/>
+         <property name="proxyInformation" value="ProxyInformation { proxyOption=NO_PROXY, proxyServerType=HTTP, username=, password=********, proxyServerAddress=, proxyServerPort=0, executionList=&quot;&quot;, isApplyToDesiredCapabilities=true }"/>
+         <property name="platform" value="Windows 11"/>
+      </properties>
+      <testcase name="Test Cases/Step Definition/Update Profile/TCPRO001 - User complete their account information" time="17.336" classname="Test Cases/Step Definition/Update Profile/TCPRO001 - User complete their account information" status="PASSED">
+         <system-out><![CDATA[2024-01-31 22:10:04 - [TEST_CASE][PASSED] - Test Cases/Step Definition/Update Profile/TCPRO001 - User complete their account information: Test Cases/Step Definition/Update Profile/TCPRO001 - User complete their account information
+
+2024-01-31 22:10:04 - [TEST_STEP][PASSED] - Start listener action : beforeTestCase: Navigate to 'https://secondhand.binaracademy.org/' successfully
+
+2024-01-31 22:10:04 - [TEST_STEP][PASSED] - logInfo("Test Case: " + testCaseContext.getTestCaseId()): Test Case: Test Cases/Step Definition/Update Profile/TCPRO001 - User complete their account information
+
+2024-01-31 22:10:04 - [MESSAGE][INFO] - Test Case: Test Cases/Step Definition/Update Profile/TCPRO001 - User complete their account information
+
+2024-01-31 22:10:04 - [TEST_STEP][PASSED] - openBrowser(): null
+
+2024-01-31 22:10:04 - [TEST_STEP][PASSED] - openBrowser(""): Browser is opened with url: ''
+
+2024-01-31 22:10:04 - [MESSAGE][WARNING] - A browser is already opened. Closing browser and opening a new one
+
+2024-01-31 22:10:07 - [MESSAGE][INFO] - Starting 'Firefox' driver
+
+2024-01-31 22:10:07 - [MESSAGE][INFO] - Action delay is set to 0 milliseconds
+
+2024-01-31 22:10:10 - [MESSAGE][PASSED] - Browser is opened with url: ''
+
+2024-01-31 22:10:10 - [TEST_STEP][PASSED] - maximizeWindow(): Current window maximized
+
+2024-01-31 22:10:10 - [MESSAGE][PASSED] - Current window maximized
+
+2024-01-31 22:10:10 - [TEST_STEP][PASSED] - navigateToUrl(base_url): Navigate to 'https://secondhand.binaracademy.org/' successfully
+
+2024-01-31 22:10:11 - [MESSAGE][PASSED] - Navigate to 'https://secondhand.binaracademy.org/' successfully
+
+2024-01-31 22:10:11 - [TEST_STEP][PASSED] - callTestCase(findTestCase("Test Template/Logindani"), ["email":"oklanlie5@gmai.com", "password":"Okilani2000"], STOP_ON_FAILURE): Call Test Case 'Test Cases/Test Template/Logindani' successfully
+
+2024-01-31 22:10:11 - [TEST_CASE][PASSED] - Test Cases/Test Template/Logindani: Test Cases/Test Template/Logindani
+
+2024-01-31 22:10:11 - [TEST_STEP][PASSED] - click(findTestObject("Homepage/btn_masuk")): Object: 'Object Repository/Homepage/btn_masuk' is clicked on
+
+2024-01-31 22:10:12 - [MESSAGE][PASSED] - Object: 'Object Repository/Homepage/btn_masuk' is clicked on
+
+2024-01-31 22:10:12 - [TEST_STEP][PASSED] - delay(1): Delayed 1 second(s)
+
+2024-01-31 22:10:13 - [MESSAGE][PASSED] - Delayed 1 second(s)
+
+2024-01-31 22:10:13 - [TEST_STEP][PASSED] - sendKeys(findTestObject("Login/input_email"), email): Keys 'oklanlie5@gmai.com' sent to object: 'Object Repository/Login/input_email'
+
+2024-01-31 22:10:13 - [MESSAGE][PASSED] - Keys 'oklanlie5@gmai.com' sent to object: 'Object Repository/Login/input_email'
+
+2024-01-31 22:10:13 - [TEST_STEP][PASSED] - sendKeys(findTestObject("Login/input_password"), password): Keys 'Okilani2000' sent to object: 'Object Repository/Login/input_password'
+
+2024-01-31 22:10:14 - [MESSAGE][PASSED] - Keys 'Okilani2000' sent to object: 'Object Repository/Login/input_password'
+
+2024-01-31 22:10:14 - [TEST_STEP][PASSED] - click(findTestObject("Login/btn_login")): Object: 'Object Repository/Login/btn_login' is clicked on
+
+2024-01-31 22:10:14 - [MESSAGE][PASSED] - Object: 'Object Repository/Login/btn_login' is clicked on
+
+2024-01-31 22:10:14 - [MESSAGE][PASSED] - Call Test Case 'Test Cases/Test Template/Logindani' successfully
+
+2024-01-31 22:10:14 - [TEST_STEP][PASSED] - click(findTestObject("Homepage/Profil Saya_button")): Object: 'Object Repository/Homepage/Profil Saya_button' is clicked on
+
+2024-01-31 22:10:16 - [MESSAGE][PASSED] - Object: 'Object Repository/Homepage/Profil Saya_button' is clicked on
+
+2024-01-31 22:10:16 - [TEST_STEP][PASSED] - delay(1): Delayed 1 second(s)
+
+2024-01-31 22:10:17 - [MESSAGE][PASSED] - Delayed 1 second(s)
+
+2024-01-31 22:10:17 - [TEST_STEP][PASSED] - click(findTestObject("Homepage/Profile Name_button")): Object: 'Object Repository/Homepage/Profile Name_button' is clicked on
+
+2024-01-31 22:10:17 - [MESSAGE][PASSED] - Object: 'Object Repository/Homepage/Profile Name_button' is clicked on
+
+2024-01-31 22:10:17 - [TEST_STEP][PASSED] - delay(1, STOP_ON_FAILURE): Delayed 1 second(s)
+
+2024-01-31 22:10:18 - [MESSAGE][PASSED] - Delayed 1 second(s)
+
+2024-01-31 22:10:18 - [TEST_STEP][PASSED] - selectOptionByValue(findTestObject("Profile Page/Kota_dropdown"), "2", false): All options with value '2' are selected in object 'Object Repository/Profile Page/Kota_dropdown' 
+
+2024-01-31 22:10:19 - [MESSAGE][PASSED] - All options with value '2' are selected in object 'Object Repository/Profile Page/Kota_dropdown' 
+
+2024-01-31 22:10:19 - [TEST_STEP][PASSED] - click(findTestObject("Profile Page/Alamat_input")): Object: 'Object Repository/Profile Page/Alamat_input' is clicked on
+
+2024-01-31 22:10:20 - [MESSAGE][PASSED] - Object: 'Object Repository/Profile Page/Alamat_input' is clicked on
+
+2024-01-31 22:10:20 - [TEST_STEP][PASSED] - sendKeys(findTestObject("Profile Page/Alamat_input"), "Jalan-in aja dulu"): Keys 'Jalan-in aja dulu' sent to object: 'Object Repository/Profile Page/Alamat_input'
+
+2024-01-31 22:10:20 - [MESSAGE][PASSED] - Keys 'Jalan-in aja dulu' sent to object: 'Object Repository/Profile Page/Alamat_input'
+
+2024-01-31 22:10:20 - [TEST_STEP][PASSED] - sendKeys(findTestObject("Profile Page/No Handphone_input"), "0812345678"): Keys '0812345678' sent to object: 'Object Repository/Profile Page/No Handphone_input'
+
+2024-01-31 22:10:20 - [MESSAGE][PASSED] - Keys '0812345678' sent to object: 'Object Repository/Profile Page/No Handphone_input'
+
+2024-01-31 22:10:20 - [TEST_STEP][PASSED] - click(findTestObject("Profile Page/Save_button")): Object: 'Object Repository/Profile Page/Save_button' is clicked on
+
+2024-01-31 22:10:21 - [MESSAGE][PASSED] - Object: 'Object Repository/Profile Page/Save_button' is clicked on
+
+2024-01-31 22:10:21 - [TEST_STEP][PASSED] - Start listener action : afterTestCase: Browser is closed
+
+2024-01-31 22:10:21 - [TEST_STEP][PASSED] - logInfo("Test Case: " + testCaseContext.getTestCaseId()): Test Case: Test Cases/Step Definition/Update Profile/TCPRO001 - User complete their account information
+
+2024-01-31 22:10:21 - [MESSAGE][INFO] - Test Case: Test Cases/Step Definition/Update Profile/TCPRO001 - User complete their account information
+
+2024-01-31 22:10:21 - [TEST_STEP][PASSED] - closeBrowser(): null
+
+2024-01-31 22:10:21 - [TEST_STEP][PASSED] - closeBrowser(): Browser is closed
+
+2024-01-31 22:10:22 - [MESSAGE][PASSED] - Browser is closed]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Step Definition/Update Profile/TCPRO002 - User change their name" time="13.741" classname="Test Cases/Step Definition/Update Profile/TCPRO002 - User change their name" status="PASSED">
+         <system-out><![CDATA[2024-01-31 22:10:22 - [TEST_CASE][PASSED] - Test Cases/Step Definition/Update Profile/TCPRO002 - User change their name: Test Cases/Step Definition/Update Profile/TCPRO002 - User change their name
+
+2024-01-31 22:10:22 - [TEST_STEP][PASSED] - Start listener action : beforeTestCase: Navigate to 'https://secondhand.binaracademy.org/' successfully
+
+2024-01-31 22:10:22 - [TEST_STEP][PASSED] - logInfo("Test Case: " + testCaseContext.getTestCaseId()): Test Case: Test Cases/Step Definition/Update Profile/TCPRO002 - User change their name
+
+2024-01-31 22:10:22 - [MESSAGE][INFO] - Test Case: Test Cases/Step Definition/Update Profile/TCPRO002 - User change their name
+
+2024-01-31 22:10:22 - [TEST_STEP][PASSED] - openBrowser(): null
+
+2024-01-31 22:10:22 - [TEST_STEP][PASSED] - openBrowser(""): Browser is opened with url: ''
+
+2024-01-31 22:10:22 - [MESSAGE][INFO] - Starting 'Firefox' driver
+
+2024-01-31 22:10:22 - [MESSAGE][INFO] - Action delay is set to 0 milliseconds
+
+2024-01-31 22:10:24 - [MESSAGE][PASSED] - Browser is opened with url: ''
+
+2024-01-31 22:10:24 - [TEST_STEP][PASSED] - maximizeWindow(): Current window maximized
+
+2024-01-31 22:10:24 - [MESSAGE][PASSED] - Current window maximized
+
+2024-01-31 22:10:24 - [TEST_STEP][PASSED] - navigateToUrl(base_url): Navigate to 'https://secondhand.binaracademy.org/' successfully
+
+2024-01-31 22:10:25 - [MESSAGE][PASSED] - Navigate to 'https://secondhand.binaracademy.org/' successfully
+
+2024-01-31 22:10:25 - [TEST_STEP][PASSED] - callTestCase(findTestCase("Test Template/Logindani"), ["email":"oklanlie5@gmai.com", "password":"Okilani2000"], STOP_ON_FAILURE): Call Test Case 'Test Cases/Test Template/Logindani' successfully
+
+2024-01-31 22:10:25 - [TEST_CASE][PASSED] - Test Cases/Test Template/Logindani: Test Cases/Test Template/Logindani
+
+2024-01-31 22:10:25 - [TEST_STEP][PASSED] - click(findTestObject("Homepage/btn_masuk")): Object: 'Object Repository/Homepage/btn_masuk' is clicked on
+
+2024-01-31 22:10:26 - [MESSAGE][PASSED] - Object: 'Object Repository/Homepage/btn_masuk' is clicked on
+
+2024-01-31 22:10:26 - [TEST_STEP][PASSED] - delay(1): Delayed 1 second(s)
+
+2024-01-31 22:10:27 - [MESSAGE][PASSED] - Delayed 1 second(s)
+
+2024-01-31 22:10:27 - [TEST_STEP][PASSED] - sendKeys(findTestObject("Login/input_email"), email): Keys 'oklanlie5@gmai.com' sent to object: 'Object Repository/Login/input_email'
+
+2024-01-31 22:10:27 - [MESSAGE][PASSED] - Keys 'oklanlie5@gmai.com' sent to object: 'Object Repository/Login/input_email'
+
+2024-01-31 22:10:27 - [TEST_STEP][PASSED] - sendKeys(findTestObject("Login/input_password"), password): Keys 'Okilani2000' sent to object: 'Object Repository/Login/input_password'
+
+2024-01-31 22:10:27 - [MESSAGE][PASSED] - Keys 'Okilani2000' sent to object: 'Object Repository/Login/input_password'
+
+2024-01-31 22:10:27 - [TEST_STEP][PASSED] - click(findTestObject("Login/btn_login")): Object: 'Object Repository/Login/btn_login' is clicked on
+
+2024-01-31 22:10:28 - [MESSAGE][PASSED] - Object: 'Object Repository/Login/btn_login' is clicked on
+
+2024-01-31 22:10:28 - [MESSAGE][PASSED] - Call Test Case 'Test Cases/Test Template/Logindani' successfully
+
+2024-01-31 22:10:28 - [TEST_STEP][PASSED] - click(findTestObject("Homepage/Profil Saya_button")): Object: 'Object Repository/Homepage/Profil Saya_button' is clicked on
+
+2024-01-31 22:10:30 - [MESSAGE][PASSED] - Object: 'Object Repository/Homepage/Profil Saya_button' is clicked on
+
+2024-01-31 22:10:30 - [TEST_STEP][PASSED] - delay(1): Delayed 1 second(s)
+
+2024-01-31 22:10:31 - [MESSAGE][PASSED] - Delayed 1 second(s)
+
+2024-01-31 22:10:31 - [TEST_STEP][PASSED] - click(findTestObject("Homepage/Profile Name_button")): Object: 'Object Repository/Homepage/Profile Name_button' is clicked on
+
+2024-01-31 22:10:31 - [MESSAGE][PASSED] - Object: 'Object Repository/Homepage/Profile Name_button' is clicked on
+
+2024-01-31 22:10:31 - [TEST_STEP][PASSED] - delay(1, STOP_ON_FAILURE): Delayed 1 second(s)
+
+2024-01-31 22:10:32 - [MESSAGE][PASSED] - Delayed 1 second(s)
+
+2024-01-31 22:10:32 - [TEST_STEP][PASSED] - click(findTestObject("Profile Page/Nama_input")): Object: 'Object Repository/Profile Page/Nama_input' is clicked on
+
+2024-01-31 22:10:33 - [MESSAGE][PASSED] - Object: 'Object Repository/Profile Page/Nama_input' is clicked on
+
+2024-01-31 22:10:33 - [TEST_STEP][PASSED] - clearText(findTestObject("Profile Page/Nama_input")): Text of object 'Object Repository/Profile Page/Nama_input' is cleared
+
+2024-01-31 22:10:33 - [MESSAGE][PASSED] - Text of object 'Object Repository/Profile Page/Nama_input' is cleared
+
+2024-01-31 22:10:33 - [TEST_STEP][PASSED] - delay(1): Delayed 1 second(s)
+
+2024-01-31 22:10:34 - [MESSAGE][PASSED] - Delayed 1 second(s)
+
+2024-01-31 22:10:34 - [TEST_STEP][PASSED] - sendKeys(findTestObject("Profile Page/Nama_input"), "Sabrina"): Keys 'Sabrina' sent to object: 'Object Repository/Profile Page/Nama_input'
+
+2024-01-31 22:10:34 - [MESSAGE][PASSED] - Keys 'Sabrina' sent to object: 'Object Repository/Profile Page/Nama_input'
+
+2024-01-31 22:10:34 - [TEST_STEP][PASSED] - click(findTestObject("Profile Page/Save_button")): Object: 'Object Repository/Profile Page/Save_button' is clicked on
+
+2024-01-31 22:10:35 - [MESSAGE][PASSED] - Object: 'Object Repository/Profile Page/Save_button' is clicked on
+
+2024-01-31 22:10:35 - [TEST_STEP][PASSED] - Start listener action : afterTestCase: Browser is closed
+
+2024-01-31 22:10:35 - [TEST_STEP][PASSED] - logInfo("Test Case: " + testCaseContext.getTestCaseId()): Test Case: Test Cases/Step Definition/Update Profile/TCPRO002 - User change their name
+
+2024-01-31 22:10:35 - [MESSAGE][INFO] - Test Case: Test Cases/Step Definition/Update Profile/TCPRO002 - User change their name
+
+2024-01-31 22:10:35 - [TEST_STEP][PASSED] - closeBrowser(): null
+
+2024-01-31 22:10:35 - [TEST_STEP][PASSED] - closeBrowser(): Browser is closed
+
+2024-01-31 22:10:35 - [MESSAGE][PASSED] - Browser is closed]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Step Definition/Update Profile/TCPRO003 - User change their city" time="12.618" classname="Test Cases/Step Definition/Update Profile/TCPRO003 - User change their city" status="PASSED">
+         <system-out><![CDATA[2024-01-31 22:10:35 - [TEST_CASE][PASSED] - Test Cases/Step Definition/Update Profile/TCPRO003 - User change their city: Test Cases/Step Definition/Update Profile/TCPRO003 - User change their city
+
+2024-01-31 22:10:35 - [TEST_STEP][PASSED] - Start listener action : beforeTestCase: Navigate to 'https://secondhand.binaracademy.org/' successfully
+
+2024-01-31 22:10:35 - [TEST_STEP][PASSED] - logInfo("Test Case: " + testCaseContext.getTestCaseId()): Test Case: Test Cases/Step Definition/Update Profile/TCPRO003 - User change their city
+
+2024-01-31 22:10:35 - [MESSAGE][INFO] - Test Case: Test Cases/Step Definition/Update Profile/TCPRO003 - User change their city
+
+2024-01-31 22:10:35 - [TEST_STEP][PASSED] - openBrowser(): null
+
+2024-01-31 22:10:35 - [TEST_STEP][PASSED] - openBrowser(""): Browser is opened with url: ''
+
+2024-01-31 22:10:35 - [MESSAGE][INFO] - Starting 'Firefox' driver
+
+2024-01-31 22:10:35 - [MESSAGE][INFO] - Action delay is set to 0 milliseconds
+
+2024-01-31 22:10:38 - [MESSAGE][PASSED] - Browser is opened with url: ''
+
+2024-01-31 22:10:38 - [TEST_STEP][PASSED] - maximizeWindow(): Current window maximized
+
+2024-01-31 22:10:38 - [MESSAGE][PASSED] - Current window maximized
+
+2024-01-31 22:10:38 - [TEST_STEP][PASSED] - navigateToUrl(base_url): Navigate to 'https://secondhand.binaracademy.org/' successfully
+
+2024-01-31 22:10:39 - [MESSAGE][PASSED] - Navigate to 'https://secondhand.binaracademy.org/' successfully
+
+2024-01-31 22:10:39 - [TEST_STEP][PASSED] - callTestCase(findTestCase("Test Template/Logindani"), ["email":"oklanlie5@gmai.com", "password":"Okilani2000"], STOP_ON_FAILURE): Call Test Case 'Test Cases/Test Template/Logindani' successfully
+
+2024-01-31 22:10:39 - [TEST_CASE][PASSED] - Test Cases/Test Template/Logindani: Test Cases/Test Template/Logindani
+
+2024-01-31 22:10:39 - [TEST_STEP][PASSED] - click(findTestObject("Homepage/btn_masuk")): Object: 'Object Repository/Homepage/btn_masuk' is clicked on
+
+2024-01-31 22:10:40 - [MESSAGE][PASSED] - Object: 'Object Repository/Homepage/btn_masuk' is clicked on
+
+2024-01-31 22:10:40 - [TEST_STEP][PASSED] - delay(1): Delayed 1 second(s)
+
+2024-01-31 22:10:41 - [MESSAGE][PASSED] - Delayed 1 second(s)
+
+2024-01-31 22:10:41 - [TEST_STEP][PASSED] - sendKeys(findTestObject("Login/input_email"), email): Keys 'oklanlie5@gmai.com' sent to object: 'Object Repository/Login/input_email'
+
+2024-01-31 22:10:41 - [MESSAGE][PASSED] - Keys 'oklanlie5@gmai.com' sent to object: 'Object Repository/Login/input_email'
+
+2024-01-31 22:10:41 - [TEST_STEP][PASSED] - sendKeys(findTestObject("Login/input_password"), password): Keys 'Okilani2000' sent to object: 'Object Repository/Login/input_password'
+
+2024-01-31 22:10:41 - [MESSAGE][PASSED] - Keys 'Okilani2000' sent to object: 'Object Repository/Login/input_password'
+
+2024-01-31 22:10:41 - [TEST_STEP][PASSED] - click(findTestObject("Login/btn_login")): Object: 'Object Repository/Login/btn_login' is clicked on
+
+2024-01-31 22:10:42 - [MESSAGE][PASSED] - Object: 'Object Repository/Login/btn_login' is clicked on
+
+2024-01-31 22:10:42 - [MESSAGE][PASSED] - Call Test Case 'Test Cases/Test Template/Logindani' successfully
+
+2024-01-31 22:10:42 - [TEST_STEP][PASSED] - click(findTestObject("Homepage/Profil Saya_button")): Object: 'Object Repository/Homepage/Profil Saya_button' is clicked on
+
+2024-01-31 22:10:43 - [MESSAGE][PASSED] - Object: 'Object Repository/Homepage/Profil Saya_button' is clicked on
+
+2024-01-31 22:10:43 - [TEST_STEP][PASSED] - delay(1): Delayed 1 second(s)
+
+2024-01-31 22:10:44 - [MESSAGE][PASSED] - Delayed 1 second(s)
+
+2024-01-31 22:10:44 - [TEST_STEP][PASSED] - click(findTestObject("Homepage/Profile Name_button")): Object: 'Object Repository/Homepage/Profile Name_button' is clicked on
+
+2024-01-31 22:10:45 - [MESSAGE][PASSED] - Object: 'Object Repository/Homepage/Profile Name_button' is clicked on
+
+2024-01-31 22:10:45 - [TEST_STEP][PASSED] - delay(1, STOP_ON_FAILURE): Delayed 1 second(s)
+
+2024-01-31 22:10:46 - [MESSAGE][PASSED] - Delayed 1 second(s)
+
+2024-01-31 22:10:46 - [TEST_STEP][PASSED] - click(findTestObject("Profile Page/Kota_dropdown")): Object: 'Object Repository/Profile Page/Kota_dropdown' is clicked on
+
+2024-01-31 22:10:46 - [MESSAGE][PASSED] - Object: 'Object Repository/Profile Page/Kota_dropdown' is clicked on
+
+2024-01-31 22:10:46 - [TEST_STEP][PASSED] - selectOptionByValue(findTestObject("Profile Page/Kota_dropdown"), "4", false): All options with value '4' are selected in object 'Object Repository/Profile Page/Kota_dropdown' 
+
+2024-01-31 22:10:47 - [MESSAGE][PASSED] - All options with value '4' are selected in object 'Object Repository/Profile Page/Kota_dropdown' 
+
+2024-01-31 22:10:47 - [TEST_STEP][PASSED] - click(findTestObject("Profile Page/Save_button")): Object: 'Object Repository/Profile Page/Save_button' is clicked on
+
+2024-01-31 22:10:47 - [MESSAGE][PASSED] - Object: 'Object Repository/Profile Page/Save_button' is clicked on
+
+2024-01-31 22:10:47 - [TEST_STEP][PASSED] - Start listener action : afterTestCase: Browser is closed
+
+2024-01-31 22:10:47 - [TEST_STEP][PASSED] - logInfo("Test Case: " + testCaseContext.getTestCaseId()): Test Case: Test Cases/Step Definition/Update Profile/TCPRO003 - User change their city
+
+2024-01-31 22:10:47 - [MESSAGE][INFO] - Test Case: Test Cases/Step Definition/Update Profile/TCPRO003 - User change their city
+
+2024-01-31 22:10:47 - [TEST_STEP][PASSED] - closeBrowser(): null
+
+2024-01-31 22:10:47 - [TEST_STEP][PASSED] - closeBrowser(): Browser is closed
+
+2024-01-31 22:10:48 - [MESSAGE][PASSED] - Browser is closed]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Step Definition/Update Profile/TCPRO004 - User put in alphabet at the number fill box" time="13.604" classname="Test Cases/Step Definition/Update Profile/TCPRO004 - User put in alphabet at the number fill box" status="PASSED">
+         <system-out><![CDATA[2024-01-31 22:10:48 - [TEST_CASE][PASSED] - Test Cases/Step Definition/Update Profile/TCPRO004 - User put in alphabet at the number fill box: Test Cases/Step Definition/Update Profile/TCPRO004 - User put in alphabet at the number fill box
+
+2024-01-31 22:10:48 - [TEST_STEP][PASSED] - Start listener action : beforeTestCase: Navigate to 'https://secondhand.binaracademy.org/' successfully
+
+2024-01-31 22:10:48 - [TEST_STEP][PASSED] - logInfo("Test Case: " + testCaseContext.getTestCaseId()): Test Case: Test Cases/Step Definition/Update Profile/TCPRO004 - User put in alphabet at the number fill box
+
+2024-01-31 22:10:48 - [MESSAGE][INFO] - Test Case: Test Cases/Step Definition/Update Profile/TCPRO004 - User put in alphabet at the number fill box
+
+2024-01-31 22:10:48 - [TEST_STEP][PASSED] - openBrowser(): null
+
+2024-01-31 22:10:48 - [TEST_STEP][PASSED] - openBrowser(""): Browser is opened with url: ''
+
+2024-01-31 22:10:48 - [MESSAGE][INFO] - Starting 'Firefox' driver
+
+2024-01-31 22:10:48 - [MESSAGE][INFO] - Action delay is set to 0 milliseconds
+
+2024-01-31 22:10:51 - [MESSAGE][PASSED] - Browser is opened with url: ''
+
+2024-01-31 22:10:51 - [TEST_STEP][PASSED] - maximizeWindow(): Current window maximized
+
+2024-01-31 22:10:51 - [MESSAGE][PASSED] - Current window maximized
+
+2024-01-31 22:10:51 - [TEST_STEP][PASSED] - navigateToUrl(base_url): Navigate to 'https://secondhand.binaracademy.org/' successfully
+
+2024-01-31 22:10:52 - [MESSAGE][PASSED] - Navigate to 'https://secondhand.binaracademy.org/' successfully
+
+2024-01-31 22:10:52 - [TEST_STEP][PASSED] - callTestCase(findTestCase("Test Template/Logindani"), ["email":"oklanlie5@gmai.com", "password":"Okilani2000"], STOP_ON_FAILURE): Call Test Case 'Test Cases/Test Template/Logindani' successfully
+
+2024-01-31 22:10:52 - [TEST_CASE][PASSED] - Test Cases/Test Template/Logindani: Test Cases/Test Template/Logindani
+
+2024-01-31 22:10:52 - [TEST_STEP][PASSED] - click(findTestObject("Homepage/btn_masuk")): Object: 'Object Repository/Homepage/btn_masuk' is clicked on
+
+2024-01-31 22:10:53 - [MESSAGE][PASSED] - Object: 'Object Repository/Homepage/btn_masuk' is clicked on
+
+2024-01-31 22:10:53 - [TEST_STEP][PASSED] - delay(1): Delayed 1 second(s)
+
+2024-01-31 22:10:54 - [MESSAGE][PASSED] - Delayed 1 second(s)
+
+2024-01-31 22:10:54 - [TEST_STEP][PASSED] - sendKeys(findTestObject("Login/input_email"), email): Keys 'oklanlie5@gmai.com' sent to object: 'Object Repository/Login/input_email'
+
+2024-01-31 22:10:54 - [MESSAGE][PASSED] - Keys 'oklanlie5@gmai.com' sent to object: 'Object Repository/Login/input_email'
+
+2024-01-31 22:10:54 - [TEST_STEP][PASSED] - sendKeys(findTestObject("Login/input_password"), password): Keys 'Okilani2000' sent to object: 'Object Repository/Login/input_password'
+
+2024-01-31 22:10:54 - [MESSAGE][PASSED] - Keys 'Okilani2000' sent to object: 'Object Repository/Login/input_password'
+
+2024-01-31 22:10:54 - [TEST_STEP][PASSED] - click(findTestObject("Login/btn_login")): Object: 'Object Repository/Login/btn_login' is clicked on
+
+2024-01-31 22:10:55 - [MESSAGE][PASSED] - Object: 'Object Repository/Login/btn_login' is clicked on
+
+2024-01-31 22:10:55 - [MESSAGE][PASSED] - Call Test Case 'Test Cases/Test Template/Logindani' successfully
+
+2024-01-31 22:10:55 - [TEST_STEP][PASSED] - click(findTestObject("Homepage/Profil Saya_button")): Object: 'Object Repository/Homepage/Profil Saya_button' is clicked on
+
+2024-01-31 22:10:56 - [MESSAGE][PASSED] - Object: 'Object Repository/Homepage/Profil Saya_button' is clicked on
+
+2024-01-31 22:10:56 - [TEST_STEP][PASSED] - delay(1): Delayed 1 second(s)
+
+2024-01-31 22:10:57 - [MESSAGE][PASSED] - Delayed 1 second(s)
+
+2024-01-31 22:10:57 - [TEST_STEP][PASSED] - click(findTestObject("Homepage/Profile Name_button")): Object: 'Object Repository/Homepage/Profile Name_button' is clicked on
+
+2024-01-31 22:10:58 - [MESSAGE][PASSED] - Object: 'Object Repository/Homepage/Profile Name_button' is clicked on
+
+2024-01-31 22:10:58 - [TEST_STEP][PASSED] - delay(1, STOP_ON_FAILURE): Delayed 1 second(s)
+
+2024-01-31 22:10:59 - [MESSAGE][PASSED] - Delayed 1 second(s)
+
+2024-01-31 22:10:59 - [TEST_STEP][PASSED] - click(findTestObject("Profile Page/No Handphone_input")): Object: 'Object Repository/Profile Page/No Handphone_input' is clicked on
+
+2024-01-31 22:10:59 - [MESSAGE][PASSED] - Object: 'Object Repository/Profile Page/No Handphone_input' is clicked on
+
+2024-01-31 22:10:59 - [TEST_STEP][PASSED] - sendKeys(findTestObject("Profile Page/No Handphone_input"), "abcdefg"): Keys 'abcdefg' sent to object: 'Object Repository/Profile Page/No Handphone_input'
+
+2024-01-31 22:10:59 - [MESSAGE][PASSED] - Keys 'abcdefg' sent to object: 'Object Repository/Profile Page/No Handphone_input'
+
+2024-01-31 22:10:59 - [TEST_STEP][PASSED] - delay(1): Delayed 1 second(s)
+
+2024-01-31 22:11:00 - [MESSAGE][PASSED] - Delayed 1 second(s)
+
+2024-01-31 22:11:00 - [TEST_STEP][PASSED] - click(findTestObject("Profile Page/Save_button")): Object: 'Object Repository/Profile Page/Save_button' is clicked on
+
+2024-01-31 22:11:01 - [MESSAGE][PASSED] - Object: 'Object Repository/Profile Page/Save_button' is clicked on
+
+2024-01-31 22:11:01 - [TEST_STEP][PASSED] - Start listener action : afterTestCase: Browser is closed
+
+2024-01-31 22:11:01 - [TEST_STEP][PASSED] - logInfo("Test Case: " + testCaseContext.getTestCaseId()): Test Case: Test Cases/Step Definition/Update Profile/TCPRO004 - User put in alphabet at the number fill box
+
+2024-01-31 22:11:01 - [MESSAGE][INFO] - Test Case: Test Cases/Step Definition/Update Profile/TCPRO004 - User put in alphabet at the number fill box
+
+2024-01-31 22:11:01 - [TEST_STEP][PASSED] - closeBrowser(): null
+
+2024-01-31 22:11:01 - [TEST_STEP][PASSED] - closeBrowser(): Browser is closed
+
+2024-01-31 22:11:02 - [MESSAGE][PASSED] - Browser is closed]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Step Definition/Update Profile/TCPRO006 - User only fill in their Name" time="13.225" classname="Test Cases/Step Definition/Update Profile/TCPRO006 - User only fill in their Name" status="PASSED">
+         <system-out><![CDATA[2024-01-31 22:11:02 - [TEST_CASE][PASSED] - Test Cases/Step Definition/Update Profile/TCPRO006 - User only fill in their Name: Test Cases/Step Definition/Update Profile/TCPRO006 - User only fill in their Name
+
+2024-01-31 22:11:02 - [TEST_STEP][PASSED] - Start listener action : beforeTestCase: Navigate to 'https://secondhand.binaracademy.org/' successfully
+
+2024-01-31 22:11:02 - [TEST_STEP][PASSED] - logInfo("Test Case: " + testCaseContext.getTestCaseId()): Test Case: Test Cases/Step Definition/Update Profile/TCPRO006 - User only fill in their Name
+
+2024-01-31 22:11:02 - [MESSAGE][INFO] - Test Case: Test Cases/Step Definition/Update Profile/TCPRO006 - User only fill in their Name
+
+2024-01-31 22:11:02 - [TEST_STEP][PASSED] - openBrowser(): null
+
+2024-01-31 22:11:02 - [TEST_STEP][PASSED] - openBrowser(""): Browser is opened with url: ''
+
+2024-01-31 22:11:02 - [MESSAGE][INFO] - Starting 'Firefox' driver
+
+2024-01-31 22:11:02 - [MESSAGE][INFO] - Action delay is set to 0 milliseconds
+
+2024-01-31 22:11:04 - [MESSAGE][PASSED] - Browser is opened with url: ''
+
+2024-01-31 22:11:04 - [TEST_STEP][PASSED] - maximizeWindow(): Current window maximized
+
+2024-01-31 22:11:04 - [MESSAGE][PASSED] - Current window maximized
+
+2024-01-31 22:11:04 - [TEST_STEP][PASSED] - navigateToUrl(base_url): Navigate to 'https://secondhand.binaracademy.org/' successfully
+
+2024-01-31 22:11:05 - [MESSAGE][PASSED] - Navigate to 'https://secondhand.binaracademy.org/' successfully
+
+2024-01-31 22:11:05 - [TEST_STEP][PASSED] - callTestCase(findTestCase("Test Template/Logindani"), ["email":"oklanlie5@gmai.com", "password":"Okilani2000"], STOP_ON_FAILURE): Call Test Case 'Test Cases/Test Template/Logindani' successfully
+
+2024-01-31 22:11:05 - [TEST_CASE][PASSED] - Test Cases/Test Template/Logindani: Test Cases/Test Template/Logindani
+
+2024-01-31 22:11:05 - [TEST_STEP][PASSED] - click(findTestObject("Homepage/btn_masuk")): Object: 'Object Repository/Homepage/btn_masuk' is clicked on
+
+2024-01-31 22:11:06 - [MESSAGE][PASSED] - Object: 'Object Repository/Homepage/btn_masuk' is clicked on
+
+2024-01-31 22:11:06 - [TEST_STEP][PASSED] - delay(1): Delayed 1 second(s)
+
+2024-01-31 22:11:07 - [MESSAGE][PASSED] - Delayed 1 second(s)
+
+2024-01-31 22:11:07 - [TEST_STEP][PASSED] - sendKeys(findTestObject("Login/input_email"), email): Keys 'oklanlie5@gmai.com' sent to object: 'Object Repository/Login/input_email'
+
+2024-01-31 22:11:07 - [MESSAGE][PASSED] - Keys 'oklanlie5@gmai.com' sent to object: 'Object Repository/Login/input_email'
+
+2024-01-31 22:11:07 - [TEST_STEP][PASSED] - sendKeys(findTestObject("Login/input_password"), password): Keys 'Okilani2000' sent to object: 'Object Repository/Login/input_password'
+
+2024-01-31 22:11:07 - [MESSAGE][PASSED] - Keys 'Okilani2000' sent to object: 'Object Repository/Login/input_password'
+
+2024-01-31 22:11:07 - [TEST_STEP][PASSED] - click(findTestObject("Login/btn_login")): Object: 'Object Repository/Login/btn_login' is clicked on
+
+2024-01-31 22:11:08 - [MESSAGE][PASSED] - Object: 'Object Repository/Login/btn_login' is clicked on
+
+2024-01-31 22:11:08 - [MESSAGE][PASSED] - Call Test Case 'Test Cases/Test Template/Logindani' successfully
+
+2024-01-31 22:11:08 - [TEST_STEP][PASSED] - click(findTestObject("Homepage/Profil Saya_button")): Object: 'Object Repository/Homepage/Profil Saya_button' is clicked on
+
+2024-01-31 22:11:09 - [MESSAGE][PASSED] - Object: 'Object Repository/Homepage/Profil Saya_button' is clicked on
+
+2024-01-31 22:11:09 - [TEST_STEP][PASSED] - delay(1): Delayed 1 second(s)
+
+2024-01-31 22:11:10 - [MESSAGE][PASSED] - Delayed 1 second(s)
+
+2024-01-31 22:11:10 - [TEST_STEP][PASSED] - click(findTestObject("Homepage/Profile Name_button")): Object: 'Object Repository/Homepage/Profile Name_button' is clicked on
+
+2024-01-31 22:11:11 - [MESSAGE][PASSED] - Object: 'Object Repository/Homepage/Profile Name_button' is clicked on
+
+2024-01-31 22:11:11 - [TEST_STEP][PASSED] - delay(1, STOP_ON_FAILURE): Delayed 1 second(s)
+
+2024-01-31 22:11:12 - [MESSAGE][PASSED] - Delayed 1 second(s)
+
+2024-01-31 22:11:12 - [TEST_STEP][PASSED] - selectOptionByValue(findTestObject("Profile Page/Kota_dropdown"), "1", false): All options with value '1' are selected in object 'Object Repository/Profile Page/Kota_dropdown' 
+
+2024-01-31 22:11:13 - [MESSAGE][PASSED] - All options with value '1' are selected in object 'Object Repository/Profile Page/Kota_dropdown' 
+
+2024-01-31 22:11:13 - [TEST_STEP][PASSED] - click(findTestObject("Profile Page/Alamat_input")): Object: 'Object Repository/Profile Page/Alamat_input' is clicked on
+
+2024-01-31 22:11:13 - [MESSAGE][PASSED] - Object: 'Object Repository/Profile Page/Alamat_input' is clicked on
+
+2024-01-31 22:11:13 - [TEST_STEP][PASSED] - clearText(findTestObject("Profile Page/Alamat_input"), STOP_ON_FAILURE): Text of object 'Object Repository/Profile Page/Alamat_input' is cleared
+
+2024-01-31 22:11:13 - [MESSAGE][PASSED] - Text of object 'Object Repository/Profile Page/Alamat_input' is cleared
+
+2024-01-31 22:11:13 - [TEST_STEP][PASSED] - clearText(findTestObject("Profile Page/No Handphone_input"), STOP_ON_FAILURE): Text of object 'Object Repository/Profile Page/No Handphone_input' is cleared
+
+2024-01-31 22:11:14 - [MESSAGE][PASSED] - Text of object 'Object Repository/Profile Page/No Handphone_input' is cleared
+
+2024-01-31 22:11:14 - [TEST_STEP][PASSED] - click(findTestObject("Profile Page/Save_button")): Object: 'Object Repository/Profile Page/Save_button' is clicked on
+
+2024-01-31 22:11:14 - [MESSAGE][PASSED] - Object: 'Object Repository/Profile Page/Save_button' is clicked on
+
+2024-01-31 22:11:14 - [TEST_STEP][PASSED] - Start listener action : afterTestCase: Browser is closed
+
+2024-01-31 22:11:14 - [TEST_STEP][PASSED] - logInfo("Test Case: " + testCaseContext.getTestCaseId()): Test Case: Test Cases/Step Definition/Update Profile/TCPRO006 - User only fill in their Name
+
+2024-01-31 22:11:14 - [MESSAGE][INFO] - Test Case: Test Cases/Step Definition/Update Profile/TCPRO006 - User only fill in their Name
+
+2024-01-31 22:11:14 - [TEST_STEP][PASSED] - closeBrowser(): null
+
+2024-01-31 22:11:14 - [TEST_STEP][PASSED] - closeBrowser(): Browser is closed
+
+2024-01-31 22:11:15 - [MESSAGE][PASSED] - Browser is closed]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Step Definition/Update Profile/TCPRO007 - User only fill in their City" time="13.113" classname="Test Cases/Step Definition/Update Profile/TCPRO007 - User only fill in their City" status="PASSED">
+         <system-out><![CDATA[2024-01-31 22:11:15 - [TEST_CASE][PASSED] - Test Cases/Step Definition/Update Profile/TCPRO007 - User only fill in their City: Test Cases/Step Definition/Update Profile/TCPRO007 - User only fill in their City
+
+2024-01-31 22:11:15 - [TEST_STEP][PASSED] - Start listener action : beforeTestCase: Navigate to 'https://secondhand.binaracademy.org/' successfully
+
+2024-01-31 22:11:15 - [TEST_STEP][PASSED] - logInfo("Test Case: " + testCaseContext.getTestCaseId()): Test Case: Test Cases/Step Definition/Update Profile/TCPRO007 - User only fill in their City
+
+2024-01-31 22:11:15 - [MESSAGE][INFO] - Test Case: Test Cases/Step Definition/Update Profile/TCPRO007 - User only fill in their City
+
+2024-01-31 22:11:15 - [TEST_STEP][PASSED] - openBrowser(): null
+
+2024-01-31 22:11:15 - [TEST_STEP][PASSED] - openBrowser(""): Browser is opened with url: ''
+
+2024-01-31 22:11:15 - [MESSAGE][INFO] - Starting 'Firefox' driver
+
+2024-01-31 22:11:15 - [MESSAGE][INFO] - Action delay is set to 0 milliseconds
+
+2024-01-31 22:11:18 - [MESSAGE][PASSED] - Browser is opened with url: ''
+
+2024-01-31 22:11:18 - [TEST_STEP][PASSED] - maximizeWindow(): Current window maximized
+
+2024-01-31 22:11:18 - [MESSAGE][PASSED] - Current window maximized
+
+2024-01-31 22:11:18 - [TEST_STEP][PASSED] - navigateToUrl(base_url): Navigate to 'https://secondhand.binaracademy.org/' successfully
+
+2024-01-31 22:11:19 - [MESSAGE][PASSED] - Navigate to 'https://secondhand.binaracademy.org/' successfully
+
+2024-01-31 22:11:19 - [TEST_STEP][PASSED] - callTestCase(findTestCase("Test Template/Logindani"), ["email":"oklanlie5@gmai.com", "password":"Okilani2000"], STOP_ON_FAILURE): Call Test Case 'Test Cases/Test Template/Logindani' successfully
+
+2024-01-31 22:11:19 - [TEST_CASE][PASSED] - Test Cases/Test Template/Logindani: Test Cases/Test Template/Logindani
+
+2024-01-31 22:11:19 - [TEST_STEP][PASSED] - click(findTestObject("Homepage/btn_masuk")): Object: 'Object Repository/Homepage/btn_masuk' is clicked on
+
+2024-01-31 22:11:19 - [MESSAGE][PASSED] - Object: 'Object Repository/Homepage/btn_masuk' is clicked on
+
+2024-01-31 22:11:19 - [TEST_STEP][PASSED] - delay(1): Delayed 1 second(s)
+
+2024-01-31 22:11:20 - [MESSAGE][PASSED] - Delayed 1 second(s)
+
+2024-01-31 22:11:20 - [TEST_STEP][PASSED] - sendKeys(findTestObject("Login/input_email"), email): Keys 'oklanlie5@gmai.com' sent to object: 'Object Repository/Login/input_email'
+
+2024-01-31 22:11:20 - [MESSAGE][PASSED] - Keys 'oklanlie5@gmai.com' sent to object: 'Object Repository/Login/input_email'
+
+2024-01-31 22:11:20 - [TEST_STEP][PASSED] - sendKeys(findTestObject("Login/input_password"), password): Keys 'Okilani2000' sent to object: 'Object Repository/Login/input_password'
+
+2024-01-31 22:11:21 - [MESSAGE][PASSED] - Keys 'Okilani2000' sent to object: 'Object Repository/Login/input_password'
+
+2024-01-31 22:11:21 - [TEST_STEP][PASSED] - click(findTestObject("Login/btn_login")): Object: 'Object Repository/Login/btn_login' is clicked on
+
+2024-01-31 22:11:21 - [MESSAGE][PASSED] - Object: 'Object Repository/Login/btn_login' is clicked on
+
+2024-01-31 22:11:21 - [MESSAGE][PASSED] - Call Test Case 'Test Cases/Test Template/Logindani' successfully
+
+2024-01-31 22:11:21 - [TEST_STEP][PASSED] - click(findTestObject("Homepage/Profil Saya_button")): Object: 'Object Repository/Homepage/Profil Saya_button' is clicked on
+
+2024-01-31 22:11:23 - [MESSAGE][PASSED] - Object: 'Object Repository/Homepage/Profil Saya_button' is clicked on
+
+2024-01-31 22:11:23 - [TEST_STEP][PASSED] - delay(1): Delayed 1 second(s)
+
+2024-01-31 22:11:24 - [MESSAGE][PASSED] - Delayed 1 second(s)
+
+2024-01-31 22:11:24 - [TEST_STEP][PASSED] - click(findTestObject("Homepage/Profile Name_button")): Object: 'Object Repository/Homepage/Profile Name_button' is clicked on
+
+2024-01-31 22:11:24 - [MESSAGE][PASSED] - Object: 'Object Repository/Homepage/Profile Name_button' is clicked on
+
+2024-01-31 22:11:24 - [TEST_STEP][PASSED] - delay(1, STOP_ON_FAILURE): Delayed 1 second(s)
+
+2024-01-31 22:11:25 - [MESSAGE][PASSED] - Delayed 1 second(s)
+
+2024-01-31 22:11:25 - [TEST_STEP][PASSED] - clearText(findTestObject("Profile Page/Nama_input")): Text of object 'Object Repository/Profile Page/Nama_input' is cleared
+
+2024-01-31 22:11:25 - [MESSAGE][PASSED] - Text of object 'Object Repository/Profile Page/Nama_input' is cleared
+
+2024-01-31 22:11:25 - [TEST_STEP][PASSED] - selectOptionByValue(findTestObject("Profile Page/Kota_dropdown"), "2", false): All options with value '2' are selected in object 'Object Repository/Profile Page/Kota_dropdown' 
+
+2024-01-31 22:11:26 - [MESSAGE][PASSED] - All options with value '2' are selected in object 'Object Repository/Profile Page/Kota_dropdown' 
+
+2024-01-31 22:11:26 - [TEST_STEP][PASSED] - clearText(findTestObject("Profile Page/Alamat_input"), STOP_ON_FAILURE): Text of object 'Object Repository/Profile Page/Alamat_input' is cleared
+
+2024-01-31 22:11:26 - [MESSAGE][PASSED] - Text of object 'Object Repository/Profile Page/Alamat_input' is cleared
+
+2024-01-31 22:11:26 - [TEST_STEP][PASSED] - clearText(findTestObject("Profile Page/No Handphone_input"), STOP_ON_FAILURE): Text of object 'Object Repository/Profile Page/No Handphone_input' is cleared
+
+2024-01-31 22:11:27 - [MESSAGE][PASSED] - Text of object 'Object Repository/Profile Page/No Handphone_input' is cleared
+
+2024-01-31 22:11:27 - [TEST_STEP][PASSED] - click(findTestObject("Profile Page/Save_button")): Object: 'Object Repository/Profile Page/Save_button' is clicked on
+
+2024-01-31 22:11:27 - [MESSAGE][PASSED] - Object: 'Object Repository/Profile Page/Save_button' is clicked on
+
+2024-01-31 22:11:27 - [TEST_STEP][PASSED] - Start listener action : afterTestCase: Browser is closed
+
+2024-01-31 22:11:27 - [TEST_STEP][PASSED] - logInfo("Test Case: " + testCaseContext.getTestCaseId()): Test Case: Test Cases/Step Definition/Update Profile/TCPRO007 - User only fill in their City
+
+2024-01-31 22:11:27 - [MESSAGE][INFO] - Test Case: Test Cases/Step Definition/Update Profile/TCPRO007 - User only fill in their City
+
+2024-01-31 22:11:27 - [TEST_STEP][PASSED] - closeBrowser(): null
+
+2024-01-31 22:11:27 - [TEST_STEP][PASSED] - closeBrowser(): Browser is closed
+
+2024-01-31 22:11:28 - [MESSAGE][PASSED] - Browser is closed]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Step Definition/Update Profile/TCPRO008 - User only fill in their phone number" time="12.426" classname="Test Cases/Step Definition/Update Profile/TCPRO008 - User only fill in their phone number" status="PASSED">
+         <system-out><![CDATA[2024-01-31 22:11:28 - [TEST_CASE][PASSED] - Test Cases/Step Definition/Update Profile/TCPRO008 - User only fill in their phone number: Test Cases/Step Definition/Update Profile/TCPRO008 - User only fill in their phone number
+
+2024-01-31 22:11:28 - [TEST_STEP][PASSED] - Start listener action : beforeTestCase: Navigate to 'https://secondhand.binaracademy.org/' successfully
+
+2024-01-31 22:11:28 - [TEST_STEP][PASSED] - logInfo("Test Case: " + testCaseContext.getTestCaseId()): Test Case: Test Cases/Step Definition/Update Profile/TCPRO008 - User only fill in their phone number
+
+2024-01-31 22:11:28 - [MESSAGE][INFO] - Test Case: Test Cases/Step Definition/Update Profile/TCPRO008 - User only fill in their phone number
+
+2024-01-31 22:11:28 - [TEST_STEP][PASSED] - openBrowser(): null
+
+2024-01-31 22:11:28 - [TEST_STEP][PASSED] - openBrowser(""): Browser is opened with url: ''
+
+2024-01-31 22:11:28 - [MESSAGE][INFO] - Starting 'Firefox' driver
+
+2024-01-31 22:11:28 - [MESSAGE][INFO] - Action delay is set to 0 milliseconds
+
+2024-01-31 22:11:31 - [MESSAGE][PASSED] - Browser is opened with url: ''
+
+2024-01-31 22:11:31 - [TEST_STEP][PASSED] - maximizeWindow(): Current window maximized
+
+2024-01-31 22:11:31 - [MESSAGE][PASSED] - Current window maximized
+
+2024-01-31 22:11:31 - [TEST_STEP][PASSED] - navigateToUrl(base_url): Navigate to 'https://secondhand.binaracademy.org/' successfully
+
+2024-01-31 22:11:32 - [MESSAGE][PASSED] - Navigate to 'https://secondhand.binaracademy.org/' successfully
+
+2024-01-31 22:11:32 - [TEST_STEP][PASSED] - callTestCase(findTestCase("Test Template/Logindani"), ["email":"oklanlie5@gmai.com", "password":"Okilani2000"], STOP_ON_FAILURE): Call Test Case 'Test Cases/Test Template/Logindani' successfully
+
+2024-01-31 22:11:32 - [TEST_CASE][PASSED] - Test Cases/Test Template/Logindani: Test Cases/Test Template/Logindani
+
+2024-01-31 22:11:32 - [TEST_STEP][PASSED] - click(findTestObject("Homepage/btn_masuk")): Object: 'Object Repository/Homepage/btn_masuk' is clicked on
+
+2024-01-31 22:11:32 - [MESSAGE][PASSED] - Object: 'Object Repository/Homepage/btn_masuk' is clicked on
+
+2024-01-31 22:11:32 - [TEST_STEP][PASSED] - delay(1): Delayed 1 second(s)
+
+2024-01-31 22:11:33 - [MESSAGE][PASSED] - Delayed 1 second(s)
+
+2024-01-31 22:11:33 - [TEST_STEP][PASSED] - sendKeys(findTestObject("Login/input_email"), email): Keys 'oklanlie5@gmai.com' sent to object: 'Object Repository/Login/input_email'
+
+2024-01-31 22:11:33 - [MESSAGE][PASSED] - Keys 'oklanlie5@gmai.com' sent to object: 'Object Repository/Login/input_email'
+
+2024-01-31 22:11:33 - [TEST_STEP][PASSED] - sendKeys(findTestObject("Login/input_password"), password): Keys 'Okilani2000' sent to object: 'Object Repository/Login/input_password'
+
+2024-01-31 22:11:34 - [MESSAGE][PASSED] - Keys 'Okilani2000' sent to object: 'Object Repository/Login/input_password'
+
+2024-01-31 22:11:34 - [TEST_STEP][PASSED] - click(findTestObject("Login/btn_login")): Object: 'Object Repository/Login/btn_login' is clicked on
+
+2024-01-31 22:11:34 - [MESSAGE][PASSED] - Object: 'Object Repository/Login/btn_login' is clicked on
+
+2024-01-31 22:11:34 - [MESSAGE][PASSED] - Call Test Case 'Test Cases/Test Template/Logindani' successfully
+
+2024-01-31 22:11:34 - [TEST_STEP][PASSED] - click(findTestObject("Homepage/Profil Saya_button")): Object: 'Object Repository/Homepage/Profil Saya_button' is clicked on
+
+2024-01-31 22:11:35 - [MESSAGE][PASSED] - Object: 'Object Repository/Homepage/Profil Saya_button' is clicked on
+
+2024-01-31 22:11:35 - [TEST_STEP][PASSED] - delay(1): Delayed 1 second(s)
+
+2024-01-31 22:11:36 - [MESSAGE][PASSED] - Delayed 1 second(s)
+
+2024-01-31 22:11:36 - [TEST_STEP][PASSED] - click(findTestObject("Homepage/Profile Name_button")): Object: 'Object Repository/Homepage/Profile Name_button' is clicked on
+
+2024-01-31 22:11:37 - [MESSAGE][PASSED] - Object: 'Object Repository/Homepage/Profile Name_button' is clicked on
+
+2024-01-31 22:11:37 - [TEST_STEP][PASSED] - delay(1, STOP_ON_FAILURE): Delayed 1 second(s)
+
+2024-01-31 22:11:38 - [MESSAGE][PASSED] - Delayed 1 second(s)
+
+2024-01-31 22:11:38 - [TEST_STEP][PASSED] - clearText(findTestObject("Profile Page/Nama_input")): Text of object 'Object Repository/Profile Page/Nama_input' is cleared
+
+2024-01-31 22:11:38 - [MESSAGE][PASSED] - Text of object 'Object Repository/Profile Page/Nama_input' is cleared
+
+2024-01-31 22:11:38 - [TEST_STEP][PASSED] - selectOptionByValue(findTestObject("Profile Page/Kota_dropdown"), "", true): All options with value '' are selected in object 'Object Repository/Profile Page/Kota_dropdown'  using regular expression
+
+2024-01-31 22:11:39 - [MESSAGE][PASSED] - All options with value '' are selected in object 'Object Repository/Profile Page/Kota_dropdown'  using regular expression
+
+2024-01-31 22:11:39 - [TEST_STEP][PASSED] - clearText(findTestObject("Profile Page/Alamat_input"), STOP_ON_FAILURE): Text of object 'Object Repository/Profile Page/Alamat_input' is cleared
+
+2024-01-31 22:11:39 - [MESSAGE][PASSED] - Text of object 'Object Repository/Profile Page/Alamat_input' is cleared
+
+2024-01-31 22:11:39 - [TEST_STEP][PASSED] - click(findTestObject("Profile Page/Save_button")): Object: 'Object Repository/Profile Page/Save_button' is clicked on
+
+2024-01-31 22:11:40 - [MESSAGE][PASSED] - Object: 'Object Repository/Profile Page/Save_button' is clicked on
+
+2024-01-31 22:11:40 - [TEST_STEP][PASSED] - Start listener action : afterTestCase: Browser is closed
+
+2024-01-31 22:11:40 - [TEST_STEP][PASSED] - logInfo("Test Case: " + testCaseContext.getTestCaseId()): Test Case: Test Cases/Step Definition/Update Profile/TCPRO008 - User only fill in their phone number
+
+2024-01-31 22:11:40 - [MESSAGE][INFO] - Test Case: Test Cases/Step Definition/Update Profile/TCPRO008 - User only fill in their phone number
+
+2024-01-31 22:11:40 - [TEST_STEP][PASSED] - closeBrowser(): null
+
+2024-01-31 22:11:40 - [TEST_STEP][PASSED] - closeBrowser(): Browser is closed
+
+2024-01-31 22:11:40 - [MESSAGE][PASSED] - Browser is closed]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Step Definition/Update Profile/TCPRO009 - User fill in their address" time="6.34" classname="Test Cases/Step Definition/Update Profile/TCPRO009 - User fill in their address" status="PASSED">
+         <system-out><![CDATA[2024-01-31 22:11:40 - [TEST_CASE][PASSED] - Test Cases/Step Definition/Update Profile/TCPRO009 - User fill in their address: Test Cases/Step Definition/Update Profile/TCPRO009 - User fill in their address
+
+2024-01-31 22:11:40 - [TEST_STEP][PASSED] - Start listener action : beforeTestCase: Navigate to 'https://secondhand.binaracademy.org/' successfully
+
+2024-01-31 22:11:40 - [TEST_STEP][PASSED] - logInfo("Test Case: " + testCaseContext.getTestCaseId()): Test Case: Test Cases/Step Definition/Update Profile/TCPRO009 - User fill in their address
+
+2024-01-31 22:11:40 - [MESSAGE][INFO] - Test Case: Test Cases/Step Definition/Update Profile/TCPRO009 - User fill in their address
+
+2024-01-31 22:11:40 - [TEST_STEP][PASSED] - openBrowser(): null
+
+2024-01-31 22:11:40 - [TEST_STEP][PASSED] - openBrowser(""): Browser is opened with url: ''
+
+2024-01-31 22:11:40 - [MESSAGE][INFO] - Starting 'Firefox' driver
+
+2024-01-31 22:11:40 - [MESSAGE][INFO] - Action delay is set to 0 milliseconds
+
+2024-01-31 22:11:43 - [MESSAGE][PASSED] - Browser is opened with url: ''
+
+2024-01-31 22:11:43 - [TEST_STEP][PASSED] - maximizeWindow(): Current window maximized
+
+2024-01-31 22:11:43 - [MESSAGE][PASSED] - Current window maximized
+
+2024-01-31 22:11:43 - [TEST_STEP][PASSED] - navigateToUrl(base_url): Navigate to 'https://secondhand.binaracademy.org/' successfully
+
+2024-01-31 22:11:44 - [MESSAGE][PASSED] - Navigate to 'https://secondhand.binaracademy.org/' successfully
+
+2024-01-31 22:11:44 - [TEST_STEP][PASSED] - return null: null
+
+2024-01-31 22:11:44 - [TEST_STEP][PASSED] - Start listener action : afterTestCase: Browser is closed
+
+2024-01-31 22:11:44 - [TEST_STEP][PASSED] - logInfo("Test Case: " + testCaseContext.getTestCaseId()): Test Case: Test Cases/Step Definition/Update Profile/TCPRO009 - User fill in their address
+
+2024-01-31 22:11:44 - [MESSAGE][INFO] - Test Case: Test Cases/Step Definition/Update Profile/TCPRO009 - User fill in their address
+
+2024-01-31 22:11:44 - [TEST_STEP][PASSED] - closeBrowser(): null
+
+2024-01-31 22:11:44 - [TEST_STEP][PASSED] - closeBrowser(): Browser is closed
+
+2024-01-31 22:11:47 - [MESSAGE][PASSED] - Browser is closed]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <system-out><![CDATA[2024-01-31 22:09:58 - [TEST_SUITE][PASSED] - Update Profile Test Suites (1): Test Cases/Step Definition/Update Profile/TCPRO009 - User fill in their address]]></system-out>
+      <system-err><![CDATA[]]></system-err>
+   </testsuite>
+</testsuites>

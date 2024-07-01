@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TCPRO004 - User put in alphabet at the number fill box</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>d8e617c1-cbaf-43a9-a69f-d79f85447a78</testCaseGuid>
+</TestCaseEntity>

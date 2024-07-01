@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TCREG004 - Register Without Input Name</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>8e502595-3a40-4e58-bebc-8efe907a7553</testCaseGuid>
+</TestCaseEntity>

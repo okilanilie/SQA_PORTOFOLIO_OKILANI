@@ -1,0 +1,101 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+Update Profile Test Suites (1),Firefox 120.0,,,2024-01-31 22:09:58,2024-01-31 22:11:47,1m - 48.746s,PASSED
+,,,,,,,
+Test Cases/Step Definition/Update Profile/TCPRO001 - User complete their account information,Firefox 120.0,,,2024-01-31 22:10:04,2024-01-31 22:10:22,17.336s,PASSED
+Start listener action : beforeTestCase,Firefox 120.0,,,2024-01-31 22:10:04,2024-01-31 22:10:11,6.656s,PASSED
+"callTestCase(findTestCase(""Test Template/Logindani""), [""email"":""oklanlie5@gmai.com"", ""password"":""Okilani2000""], STOP_ON_FAILURE)",Firefox 120.0,,,2024-01-31 22:10:11,2024-01-31 22:10:14,2.913s,PASSED
+"click(findTestObject(""Homepage/Profil Saya_button""))",Firefox 120.0,,,2024-01-31 22:10:14,2024-01-31 22:10:16,1.873s,PASSED
+delay(1),Firefox 120.0,,,2024-01-31 22:10:16,2024-01-31 22:10:17,1.008s,PASSED
+"click(findTestObject(""Homepage/Profile Name_button""))",Firefox 120.0,,,2024-01-31 22:10:17,2024-01-31 22:10:17,0.483s,PASSED
+"delay(1, STOP_ON_FAILURE)",Firefox 120.0,,,2024-01-31 22:10:17,2024-01-31 22:10:18,1.022s,PASSED
+"selectOptionByValue(findTestObject(""Profile Page/Kota_dropdown""), ""2"", false)",Firefox 120.0,,,2024-01-31 22:10:18,2024-01-31 22:10:19,0.755s,PASSED
+"click(findTestObject(""Profile Page/Alamat_input""))",Firefox 120.0,,,2024-01-31 22:10:19,2024-01-31 22:10:20,0.461s,PASSED
+"sendKeys(findTestObject(""Profile Page/Alamat_input""), ""Jalan-in aja dulu"")",Firefox 120.0,,,2024-01-31 22:10:20,2024-01-31 22:10:20,0.262s,PASSED
+"sendKeys(findTestObject(""Profile Page/No Handphone_input""), ""0812345678"")",Firefox 120.0,,,2024-01-31 22:10:20,2024-01-31 22:10:20,0.261s,PASSED
+"click(findTestObject(""Profile Page/Save_button""))",Firefox 120.0,,,2024-01-31 22:10:20,2024-01-31 22:10:21,0.468s,PASSED
+Start listener action : afterTestCase,Firefox 120.0,,,2024-01-31 22:10:21,2024-01-31 22:10:22,1.005s,PASSED
+,,,,,,,
+Test Cases/Step Definition/Update Profile/TCPRO002 - User change their name,Firefox 120.0,,,2024-01-31 22:10:22,2024-01-31 22:10:35,13.741s,PASSED
+Start listener action : beforeTestCase,Firefox 120.0,,,2024-01-31 22:10:22,2024-01-31 22:10:25,3.391s,PASSED
+"callTestCase(findTestCase(""Test Template/Logindani""), [""email"":""oklanlie5@gmai.com"", ""password"":""Okilani2000""], STOP_ON_FAILURE)",Firefox 120.0,,,2024-01-31 22:10:25,2024-01-31 22:10:28,2.554s,PASSED
+"click(findTestObject(""Homepage/Profil Saya_button""))",Firefox 120.0,,,2024-01-31 22:10:28,2024-01-31 22:10:30,1.883s,PASSED
+delay(1),Firefox 120.0,,,2024-01-31 22:10:30,2024-01-31 22:10:31,1.017s,PASSED
+"click(findTestObject(""Homepage/Profile Name_button""))",Firefox 120.0,,,2024-01-31 22:10:31,2024-01-31 22:10:31,0.465s,PASSED
+"delay(1, STOP_ON_FAILURE)",Firefox 120.0,,,2024-01-31 22:10:31,2024-01-31 22:10:32,1.015s,PASSED
+"click(findTestObject(""Profile Page/Nama_input""))",Firefox 120.0,,,2024-01-31 22:10:32,2024-01-31 22:10:33,0.491s,PASSED
+"clearText(findTestObject(""Profile Page/Nama_input""))",Firefox 120.0,,,2024-01-31 22:10:33,2024-01-31 22:10:33,0.268s,PASSED
+delay(1),Firefox 120.0,,,2024-01-31 22:10:33,2024-01-31 22:10:34,1.010s,PASSED
+"sendKeys(findTestObject(""Profile Page/Nama_input""), ""Sabrina"")",Firefox 120.0,,,2024-01-31 22:10:34,2024-01-31 22:10:34,0.267s,PASSED
+"click(findTestObject(""Profile Page/Save_button""))",Firefox 120.0,,,2024-01-31 22:10:34,2024-01-31 22:10:35,0.459s,PASSED
+Start listener action : afterTestCase,Firefox 120.0,,,2024-01-31 22:10:35,2024-01-31 22:10:35,0.866s,PASSED
+,,,,,,,
+Test Cases/Step Definition/Update Profile/TCPRO003 - User change their city,Firefox 120.0,,,2024-01-31 22:10:35,2024-01-31 22:10:48,12.618s,PASSED
+Start listener action : beforeTestCase,Firefox 120.0,,,2024-01-31 22:10:35,2024-01-31 22:10:39,3.524s,PASSED
+"callTestCase(findTestCase(""Test Template/Logindani""), [""email"":""oklanlie5@gmai.com"", ""password"":""Okilani2000""], STOP_ON_FAILURE)",Firefox 120.0,,,2024-01-31 22:10:39,2024-01-31 22:10:42,2.591s,PASSED
+"click(findTestObject(""Homepage/Profil Saya_button""))",Firefox 120.0,,,2024-01-31 22:10:42,2024-01-31 22:10:43,1.446s,PASSED
+delay(1),Firefox 120.0,,,2024-01-31 22:10:43,2024-01-31 22:10:44,1.015s,PASSED
+"click(findTestObject(""Homepage/Profile Name_button""))",Firefox 120.0,,,2024-01-31 22:10:44,2024-01-31 22:10:45,0.480s,PASSED
+"delay(1, STOP_ON_FAILURE)",Firefox 120.0,,,2024-01-31 22:10:45,2024-01-31 22:10:46,1.020s,PASSED
+"click(findTestObject(""Profile Page/Kota_dropdown""))",Firefox 120.0,,,2024-01-31 22:10:46,2024-01-31 22:10:46,0.479s,PASSED
+"selectOptionByValue(findTestObject(""Profile Page/Kota_dropdown""), ""4"", false)",Firefox 120.0,,,2024-01-31 22:10:46,2024-01-31 22:10:47,0.704s,PASSED
+"click(findTestObject(""Profile Page/Save_button""))",Firefox 120.0,,,2024-01-31 22:10:47,2024-01-31 22:10:47,0.461s,PASSED
+Start listener action : afterTestCase,Firefox 120.0,,,2024-01-31 22:10:47,2024-01-31 22:10:48,0.842s,PASSED
+,,,,,,,
+Test Cases/Step Definition/Update Profile/TCPRO004 - User put in alphabet at the number fill box,Firefox 120.0,,,2024-01-31 22:10:48,2024-01-31 22:11:02,13.604s,PASSED
+Start listener action : beforeTestCase,Firefox 120.0,,,2024-01-31 22:10:48,2024-01-31 22:10:52,3.890s,PASSED
+"callTestCase(findTestCase(""Test Template/Logindani""), [""email"":""oklanlie5@gmai.com"", ""password"":""Okilani2000""], STOP_ON_FAILURE)",Firefox 120.0,,,2024-01-31 22:10:52,2024-01-31 22:10:55,2.580s,PASSED
+"click(findTestObject(""Homepage/Profil Saya_button""))",Firefox 120.0,,,2024-01-31 22:10:55,2024-01-31 22:10:56,1.434s,PASSED
+delay(1),Firefox 120.0,,,2024-01-31 22:10:56,2024-01-31 22:10:57,1.023s,PASSED
+"click(findTestObject(""Homepage/Profile Name_button""))",Firefox 120.0,,,2024-01-31 22:10:57,2024-01-31 22:10:58,0.465s,PASSED
+"delay(1, STOP_ON_FAILURE)",Firefox 120.0,,,2024-01-31 22:10:58,2024-01-31 22:10:59,1.016s,PASSED
+"click(findTestObject(""Profile Page/No Handphone_input""))",Firefox 120.0,,,2024-01-31 22:10:59,2024-01-31 22:10:59,0.470s,PASSED
+"sendKeys(findTestObject(""Profile Page/No Handphone_input""), ""abcdefg"")",Firefox 120.0,,,2024-01-31 22:10:59,2024-01-31 22:10:59,0.251s,PASSED
+delay(1),Firefox 120.0,,,2024-01-31 22:10:59,2024-01-31 22:11:00,1.011s,PASSED
+"click(findTestObject(""Profile Page/Save_button""))",Firefox 120.0,,,2024-01-31 22:11:00,2024-01-31 22:11:01,0.469s,PASSED
+Start listener action : afterTestCase,Firefox 120.0,,,2024-01-31 22:11:01,2024-01-31 22:11:02,0.912s,PASSED
+,,,,,,,
+Test Cases/Step Definition/Update Profile/TCPRO006 - User only fill in their Name,Firefox 120.0,,,2024-01-31 22:11:02,2024-01-31 22:11:15,13.225s,PASSED
+Start listener action : beforeTestCase,Firefox 120.0,,,2024-01-31 22:11:02,2024-01-31 22:11:05,3.651s,PASSED
+"callTestCase(findTestCase(""Test Template/Logindani""), [""email"":""oklanlie5@gmai.com"", ""password"":""Okilani2000""], STOP_ON_FAILURE)",Firefox 120.0,,,2024-01-31 22:11:05,2024-01-31 22:11:08,2.559s,PASSED
+"click(findTestObject(""Homepage/Profil Saya_button""))",Firefox 120.0,,,2024-01-31 22:11:08,2024-01-31 22:11:09,1.440s,PASSED
+delay(1),Firefox 120.0,,,2024-01-31 22:11:09,2024-01-31 22:11:10,1.013s,PASSED
+"click(findTestObject(""Homepage/Profile Name_button""))",Firefox 120.0,,,2024-01-31 22:11:10,2024-01-31 22:11:11,0.470s,PASSED
+"delay(1, STOP_ON_FAILURE)",Firefox 120.0,,,2024-01-31 22:11:11,2024-01-31 22:11:12,1.007s,PASSED
+"selectOptionByValue(findTestObject(""Profile Page/Kota_dropdown""), ""1"", false)",Firefox 120.0,,,2024-01-31 22:11:12,2024-01-31 22:11:13,0.738s,PASSED
+"click(findTestObject(""Profile Page/Alamat_input""))",Firefox 120.0,,,2024-01-31 22:11:13,2024-01-31 22:11:13,0.462s,PASSED
+"clearText(findTestObject(""Profile Page/Alamat_input""), STOP_ON_FAILURE)",Firefox 120.0,,,2024-01-31 22:11:13,2024-01-31 22:11:13,0.256s,PASSED
+"clearText(findTestObject(""Profile Page/No Handphone_input""), STOP_ON_FAILURE)",Firefox 120.0,,,2024-01-31 22:11:13,2024-01-31 22:11:14,0.248s,PASSED
+"click(findTestObject(""Profile Page/Save_button""))",Firefox 120.0,,,2024-01-31 22:11:14,2024-01-31 22:11:14,0.468s,PASSED
+Start listener action : afterTestCase,Firefox 120.0,,,2024-01-31 22:11:14,2024-01-31 22:11:15,0.854s,PASSED
+,,,,,,,
+Test Cases/Step Definition/Update Profile/TCPRO007 - User only fill in their City,Firefox 120.0,,,2024-01-31 22:11:15,2024-01-31 22:11:28,13.113s,PASSED
+Start listener action : beforeTestCase,Firefox 120.0,,,2024-01-31 22:11:15,2024-01-31 22:11:19,3.630s,PASSED
+"callTestCase(findTestCase(""Test Template/Logindani""), [""email"":""oklanlie5@gmai.com"", ""password"":""Okilani2000""], STOP_ON_FAILURE)",Firefox 120.0,,,2024-01-31 22:11:19,2024-01-31 22:11:21,2.593s,PASSED
+"click(findTestObject(""Homepage/Profil Saya_button""))",Firefox 120.0,,,2024-01-31 22:11:21,2024-01-31 22:11:23,1.439s,PASSED
+delay(1),Firefox 120.0,,,2024-01-31 22:11:23,2024-01-31 22:11:24,1.016s,PASSED
+"click(findTestObject(""Homepage/Profile Name_button""))",Firefox 120.0,,,2024-01-31 22:11:24,2024-01-31 22:11:24,0.465s,PASSED
+"delay(1, STOP_ON_FAILURE)",Firefox 120.0,,,2024-01-31 22:11:24,2024-01-31 22:11:25,1.011s,PASSED
+"clearText(findTestObject(""Profile Page/Nama_input""))",Firefox 120.0,,,2024-01-31 22:11:25,2024-01-31 22:11:25,0.283s,PASSED
+"selectOptionByValue(findTestObject(""Profile Page/Kota_dropdown""), ""2"", false)",Firefox 120.0,,,2024-01-31 22:11:25,2024-01-31 22:11:26,0.711s,PASSED
+"clearText(findTestObject(""Profile Page/Alamat_input""), STOP_ON_FAILURE)",Firefox 120.0,,,2024-01-31 22:11:26,2024-01-31 22:11:26,0.244s,PASSED
+"clearText(findTestObject(""Profile Page/No Handphone_input""), STOP_ON_FAILURE)",Firefox 120.0,,,2024-01-31 22:11:26,2024-01-31 22:11:27,0.278s,PASSED
+"click(findTestObject(""Profile Page/Save_button""))",Firefox 120.0,,,2024-01-31 22:11:27,2024-01-31 22:11:27,0.480s,PASSED
+Start listener action : afterTestCase,Firefox 120.0,,,2024-01-31 22:11:27,2024-01-31 22:11:28,0.917s,PASSED
+,,,,,,,
+Test Cases/Step Definition/Update Profile/TCPRO008 - User only fill in their phone number,Firefox 120.0,,,2024-01-31 22:11:28,2024-01-31 22:11:40,12.426s,PASSED
+Start listener action : beforeTestCase,Firefox 120.0,,,2024-01-31 22:11:28,2024-01-31 22:11:32,3.535s,PASSED
+"callTestCase(findTestCase(""Test Template/Logindani""), [""email"":""oklanlie5@gmai.com"", ""password"":""Okilani2000""], STOP_ON_FAILURE)",Firefox 120.0,,,2024-01-31 22:11:32,2024-01-31 22:11:34,2.581s,PASSED
+"click(findTestObject(""Homepage/Profil Saya_button""))",Firefox 120.0,,,2024-01-31 22:11:34,2024-01-31 22:11:35,1.008s,PASSED
+delay(1),Firefox 120.0,,,2024-01-31 22:11:35,2024-01-31 22:11:36,1.014s,PASSED
+"click(findTestObject(""Homepage/Profile Name_button""))",Firefox 120.0,,,2024-01-31 22:11:36,2024-01-31 22:11:37,0.447s,PASSED
+"delay(1, STOP_ON_FAILURE)",Firefox 120.0,,,2024-01-31 22:11:37,2024-01-31 22:11:38,1.003s,PASSED
+"clearText(findTestObject(""Profile Page/Nama_input""))",Firefox 120.0,,,2024-01-31 22:11:38,2024-01-31 22:11:38,0.267s,PASSED
+"selectOptionByValue(findTestObject(""Profile Page/Kota_dropdown""), """", true)",Firefox 120.0,,,2024-01-31 22:11:38,2024-01-31 22:11:39,0.979s,PASSED
+"clearText(findTestObject(""Profile Page/Alamat_input""), STOP_ON_FAILURE)",Firefox 120.0,,,2024-01-31 22:11:39,2024-01-31 22:11:39,0.256s,PASSED
+"click(findTestObject(""Profile Page/Save_button""))",Firefox 120.0,,,2024-01-31 22:11:39,2024-01-31 22:11:40,0.491s,PASSED
+Start listener action : afterTestCase,Firefox 120.0,,,2024-01-31 22:11:40,2024-01-31 22:11:40,0.800s,PASSED
+,,,,,,,
+Test Cases/Step Definition/Update Profile/TCPRO009 - User fill in their address,Firefox 120.0,,,2024-01-31 22:11:40,2024-01-31 22:11:47,6.340s,PASSED
+Start listener action : beforeTestCase,Firefox 120.0,,,2024-01-31 22:11:40,2024-01-31 22:11:44,3.351s,PASSED
+return null,Firefox 120.0,,,2024-01-31 22:11:44,2024-01-31 22:11:44,0.001s,PASSED
+Start listener action : afterTestCase,Firefox 120.0,,,2024-01-31 22:11:44,2024-01-31 22:11:47,2.959s,PASSED

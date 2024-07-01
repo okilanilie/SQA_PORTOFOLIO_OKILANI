@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TCLOG02-User want to login with the incorrect email</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>34e93a9e-92b7-40a6-9506-ee3d9ede659f</testCaseGuid>
+</TestCaseEntity>

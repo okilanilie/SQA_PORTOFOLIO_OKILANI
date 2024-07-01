@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TCREG005 - Register Without Input Email FIeld</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>f763a6e3-1d91-4e16-8f6e-6a72fe4e2d51</testCaseGuid>
+</TestCaseEntity>

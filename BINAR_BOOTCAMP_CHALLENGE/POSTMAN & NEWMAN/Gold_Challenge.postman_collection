@@ -1,0 +1,1561 @@
+{
+	"info": {
+		"_postman_id": "f4ff8b37-d51a-4bc8-a9eb-5d8f063beabc",
+		"name": "Gold Challenge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24085828",
+		"_collection_link": "https://www.postman.com/grey-meteor-460041/workspace/qae15-gold-challenge-okilani/collection/24085828-f4ff8b37-d51a-4bc8-a9eb-5d8f063beabc?action=share&source=collection_link&creator=24085828"
+	},
+	"item": [
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "Regristration",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response time is less than 200ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Email is in a valid format\", function () {\r",
+									"    const responseData = pm.response.json();\r",
+									"\r",
+									"    pm.expect(responseData).to.be.an('object');\r",
+									"    pm.expect(responseData.user.email).to.exist.and.to.match(/^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response should have JSON Body\", function () { \r",
+									"    pm.response.to.have.jsonBody();\r",
+									"});\r",
+									"\r",
+									"var schema = {\r",
+									"  \"type\": \"object\",\r",
+									"  \"properties\": {\r",
+									"    \"user\": {\r",
+									"      \"type\": \"object\",\r",
+									"      \"properties\": {\r",
+									"        \"id\": {\r",
+									"          \"type\": \"integer\",\r",
+									"        },\r",
+									"        \"name\": {\r",
+									"          \"type\": \"string\"\r",
+									"        },\r",
+									"        \"email\": {\r",
+									"          \"type\": \"string\",\r",
+									"        },  \r",
+									"      },\r",
+									"      \"required\": [\r",
+									"          \"id\",\r",
+									"          \"name\",\r",
+									"          \"email\",\r",
+									"      ]\r",
+									"    },\r",
+									"    \"session\":{\r",
+									"        \"type\": \"object\",\r",
+									"        \"properties\": {\r",
+									"            \"token\" :{\r",
+									"                \"type\": \"string\"\r",
+									"            },\r",
+									"        },\r",
+									"        \"required\": [\r",
+									"            \"token\"\r",
+									"        ]\r",
+									"    }\r",
+									"  },\r",
+									"  \"required\": [\r",
+									"      \"user\",\r",
+									"      \"session\"\r",
+									"  ]\r",
+									"};\r",
+									"\r",
+									"pm.test('Schema validation', () => {\r",
+									"    pm.response.to.have.jsonSchema(schema);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"user\": {\r\n    \"name\": \"{{$randomFullName}}\",\r\n    \"email\": \"{{$randomEmail}}\",\r\n    \"password\": \"asdfghjkl\"\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base.url}}/users.json",
+							"host": [
+								"{{base.url}}"
+							],
+							"path": [
+								"users.json"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Session",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Response time is less than 500ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response should have JSON Body\", function () { \r",
+									"    pm.response.to.have.jsonBody();\r",
+									"});\r",
+									"\r",
+									"var schema = {\r",
+									"  \"type\": \"object\",\r",
+									"  \"properties\": {\r",
+									"    \"user\": {\r",
+									"      \"type\": \"object\",\r",
+									"      \"properties\": {\r",
+									"        \"id\": {\r",
+									"          \"type\": \"integer\",\r",
+									"        },\r",
+									"        \"name\": {\r",
+									"          \"type\": \"string\"\r",
+									"        },\r",
+									"        \"email\": {\r",
+									"          \"type\": \"string\",\r",
+									"        },  \r",
+									"      },\r",
+									"      \"required\": [\r",
+									"          \"id\",\r",
+									"          \"name\",\r",
+									"          \"email\",\r",
+									"      ]\r",
+									"    },\r",
+									"    \"session\":{\r",
+									"        \"type\": \"object\",\r",
+									"        \"properties\": {\r",
+									"            \"token\" :{\r",
+									"                \"type\": \"string\"\r",
+									"            },\r",
+									"        },\r",
+									"        \"required\": [\r",
+									"            \"token\"\r",
+									"        ]\r",
+									"    }\r",
+									"  },\r",
+									"  \"required\": [\r",
+									"      \"user\",\r",
+									"      \"session\"\r",
+									"  ]\r",
+									"};\r",
+									"\r",
+									"pm.test('Schema validation', () => {\r",
+									"    pm.response.to.have.jsonSchema(schema);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"user\": {\r\n    \"email\": \"darby.smith@hotmail.com\",\r\n    \"password\": \"asdfghjkl\"\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base.url}}/users/sign_in.json",
+							"host": [
+								"{{base.url}}"
+							],
+							"path": [
+								"users",
+								"sign_in.json"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Profiles",
+			"item": [
+				{
+					"name": "Update Profile",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Response time is less than 500ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response should have JSON Body\", function () { \r",
+									"    pm.response.to.have.jsonBody();\r",
+									"});\r",
+									"\r",
+									"var schema = {\r",
+									"  \"type\": \"object\",\r",
+									"  \"properties\": {\r",
+									"    \"user\": {\r",
+									"      \"type\": \"object\",\r",
+									"      \"properties\": {\r",
+									"        \"id\": {\r",
+									"          \"type\": \"integer\",\r",
+									"        },\r",
+									"        \"name\": {\r",
+									"          \"type\": \"string\"\r",
+									"        },\r",
+									"        \"email\": {\r",
+									"          \"type\": \"string\",\r",
+									"        },  \r",
+									"        \"phone_number\":{\r",
+									"            \"type\" : \"string\"\r",
+									"        },\r",
+									"        \"address\":{\r",
+									"            \"type\" : \"string\"\r",
+									"        },\r",
+									"        \"city\":{\r",
+									"            \"type\": \"object\",\r",
+									"            \"properties\": {\r",
+									"                \"id\" :{\r",
+									"                    \"type\": \"integer\"\r",
+									"                },\r",
+									"                \"name\" :{\r",
+									"                    \"type\": \"string\"\r",
+									"                },\r",
+									"            },\r",
+									"            \"required\": [\r",
+									"                \"id\",\r",
+									"                \"name\"\r",
+									"            ]\r",
+									"    },\r",
+									"    \"avatar\":{\r",
+									"        \"type\": \"object\",\r",
+									"        \"properties\": {\r",
+									"            \"filename\" :{\r",
+									"                \"type\": \"string\"\r",
+									"            },\r",
+									"            \"url\":{\r",
+									"                \"type\": \"string\"\r",
+									"            }\r",
+									"        },\r",
+									"        \"required\": [\r",
+									"            \"filename\",\r",
+									"            \"url\"\r",
+									"        ]\r",
+									"    }\r",
+									"      },\r",
+									"      \"required\": [\r",
+									"          \"id\",\r",
+									"          \"name\",\r",
+									"          \"email\",\r",
+									"          \"phone_number\",\r",
+									"          \"address\",\r",
+									"          \"city\",\r",
+									"          \"avatar\"\r",
+									"      ]\r",
+									"    },\r",
+									"    \r",
+									"  },\r",
+									"  \"required\": [\r",
+									"      \"user\",\r",
+									"  ]\r",
+									"};\r",
+									"\r",
+									"pm.test('Schema validation', () => {\r",
+									"    pm.response.to.have.jsonSchema(schema);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"warning": "This is a duplicate header and will be overridden by the Content-Type header generated by Postman.",
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "user[name]",
+									"value": "Jason",
+									"type": "text"
+								},
+								{
+									"key": "user[phone_number]",
+									"value": "987436829",
+									"type": "text"
+								},
+								{
+									"key": "user[address]",
+									"value": "jalan apa aja",
+									"type": "text"
+								},
+								{
+									"key": "user[city_id]",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "user[avatar]",
+									"type": "file",
+									"src": "710f4b0d6971497243139d0885ff8369.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base.url}}/profiles.json",
+							"host": [
+								"{{base.url}}"
+							],
+							"path": [
+								"profiles.json"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Profile",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Response time is less than 500ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response should have JSON Body\", function () { \r",
+									"    pm.response.to.have.jsonBody();\r",
+									"});\r",
+									"\r",
+									"var schema = {\r",
+									"  \"type\": \"object\",\r",
+									"  \"properties\": {\r",
+									"    \"user\": {\r",
+									"      \"type\": \"object\",\r",
+									"      \"properties\": {\r",
+									"        \"id\": {\r",
+									"          \"type\": \"integer\",\r",
+									"        },\r",
+									"        \"name\": {\r",
+									"          \"type\": \"string\"\r",
+									"        },\r",
+									"        \"email\": {\r",
+									"          \"type\": \"string\",\r",
+									"        },  \r",
+									"        \"phone_number\":{\r",
+									"            \"type\" : \"string\"\r",
+									"        },\r",
+									"        \"address\":{\r",
+									"            \"type\" : \"string\"\r",
+									"        },\r",
+									"        \"city\":{\r",
+									"            \"type\": \"object\",\r",
+									"            \"properties\": {\r",
+									"                \"id\" :{\r",
+									"                    \"type\": \"integer\"\r",
+									"                },\r",
+									"                \"name\" :{\r",
+									"                    \"type\": \"string\"\r",
+									"                },\r",
+									"            },\r",
+									"            \"required\": [\r",
+									"                \"id\",\r",
+									"                \"name\"\r",
+									"            ]\r",
+									"    },\r",
+									"    \"avatar\":{\r",
+									"        \"type\": \"object\",\r",
+									"        \"properties\": {\r",
+									"            \"filename\" :{\r",
+									"                \"type\": \"string\"\r",
+									"            },\r",
+									"            \"url\":{\r",
+									"                \"type\": \"string\"\r",
+									"            }\r",
+									"        },\r",
+									"        \"required\": [\r",
+									"            \"filename\",\r",
+									"            \"url\"\r",
+									"        ]\r",
+									"    }\r",
+									"      },\r",
+									"      \"required\": [\r",
+									"          \"id\",\r",
+									"          \"name\",\r",
+									"          \"email\",\r",
+									"          \"phone_number\",\r",
+									"          \"address\",\r",
+									"          \"city\",\r",
+									"          \"avatar\"\r",
+									"      ]\r",
+									"    },\r",
+									"  },\r",
+									"  \"required\": [\r",
+									"      \"user\",\r",
+									"  ]\r",
+									"};\r",
+									"\r",
+									"pm.test('Schema validation', () => {\r",
+									"    pm.response.to.have.jsonSchema(schema);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base.url}}/profiles.json",
+							"host": [
+								"{{base.url}}"
+							],
+							"path": [
+								"profiles.json"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Categories",
+			"item": [
+				{
+					"name": "List Categories",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Check URL\", function(){\r",
+									"  var jsonData = pm.response.json() ;\r",
+									"  pm.expect(jsonData.categories[0].url).to.be.a('string').and.to.have.lengthOf.at.least(5, \"URL should not be empty\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response time is less than 500ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response should have JSON Body\", function () { \r",
+									"    pm.response.to.have.jsonBody();\r",
+									"});\r",
+									"\r",
+									"var schema = {\r",
+									"  \"type\": \"object\",\r",
+									"  \"properties\": {\r",
+									"    \"categories\": {\r",
+									"      \"type\": \"array\",\r",
+									"      \"properties\": {\r",
+									"        \"id\": {\r",
+									"          \"type\": \"integer\",\r",
+									"        },\r",
+									"        \"name\": {\r",
+									"          \"type\": \"string\",\r",
+									"        },\r",
+									"        \"url\": {\r",
+									"          \"type\": \"string\",\r",
+									"        }\r",
+									"      }\r",
+									"    }\r",
+									"  },\r",
+									"  \"required\": [\r",
+									"      \"categories\"\r",
+									"  ]\r",
+									"};\r",
+									"\r",
+									"pm.test('Schema validation', () => {\r",
+									"    pm.response.to.have.jsonSchema(schema);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base.url}}/categories.json",
+							"host": [
+								"{{base.url}}"
+							],
+							"path": [
+								"categories.json"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Categories",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Response time is less than 500ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response should have JSON Body\", function () { \r",
+									"    pm.response.to.have.jsonBody();\r",
+									"});\r",
+									"\r",
+									"var schema = {\r",
+									"  \"type\": \"object\",\r",
+									"  \"properties\": {\r",
+									"    \"category\": {\r",
+									"      \"type\": \"object\",\r",
+									"      \"properties\": {\r",
+									"        \"id\": {\r",
+									"          \"type\": \"integer\",\r",
+									"        },\r",
+									"        \"name\": {\r",
+									"          \"type\": \"string\",\r",
+									"        },\r",
+									"        \"url\": {\r",
+									"          \"type\": \"string\",\r",
+									"        }\r",
+									"      }\r",
+									"    }\r",
+									"  },\r",
+									"  \"required\": [\r",
+									"      \"category\"\r",
+									"  ]\r",
+									"};\r",
+									"\r",
+									"pm.test('Schema validation', () => {\r",
+									"    pm.response.to.have.jsonSchema(schema);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base.url}}/categories/:id.json",
+							"host": [
+								"{{base.url}}"
+							],
+							"path": [
+								"categories",
+								":id.json"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Products",
+			"item": [
+				{
+					"name": "Create Product",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Response time is less than 500ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Status code is 201\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response should have JSON Body\", function () { \r",
+									"    pm.response.to.have.jsonBody();\r",
+									"});\r",
+									"\r",
+									"var schema = {\r",
+									"    \"type\": \"object\",\r",
+									"    \"properties\": {\r",
+									"        \"product\": {\r",
+									"            \"type\": \"object\",\r",
+									"            \"properties\": {\r",
+									"                \"id\": {\r",
+									"                    \"type\": \"integer\"\r",
+									"                },\r",
+									"                \"name\": {\r",
+									"                    \"type\": \"string\"\r",
+									"                },\r",
+									"                \"price\": {\r",
+									"                    \"type\": \"integer\"\r",
+									"                },\r",
+									"                \"description\": {\r",
+									"                    \"type\": \"string\"\r",
+									"                },\r",
+									"                \"category_id\": {\r",
+									"                    \"type\": \"integer\"\r",
+									"                },\r",
+									"                \"user_id\": {\r",
+									"                    \"type\": \"integer\"\r",
+									"                },\r",
+									"                \"created_at\": {\r",
+									"                    \"type\": \"string\"\r",
+									"                },\r",
+									"                \"update_at\": {\r",
+									"                    \"type\": \"string\"\r",
+									"                },\r",
+									"                \"url\": {\r",
+									"                    \"type\": \"string\"\r",
+									"                },\r",
+									"                \"user\": {\r",
+									"                    \"type\": \"object\",\r",
+									"                    \"properties\": {\r",
+									"                        \"id\": {\r",
+									"                            \"type\": \"integer\"\r",
+									"                        },\r",
+									"                        \"name\": {\r",
+									"                            \"type\": \"string\"\r",
+									"                        },\r",
+									"                        \"email\": {\r",
+									"                            \"type\": \"string\"\r",
+									"                        },\r",
+									"                        \"phone_number\": {\r",
+									"                            \"type\": \"string\"\r",
+									"                        },\r",
+									"                        \"address\": {\r",
+									"                            \"type\": \"string\"\r",
+									"                        },\r",
+									"                        \"city\": {\r",
+									"                            \"type\": \"object\",\r",
+									"                            \"properties\": {\r",
+									"                                \"id\": {\r",
+									"                                    \"type\": \"integer\"\r",
+									"                                },\r",
+									"                                \"name\": {\r",
+									"                                    \"type\": \"string\"\r",
+									"                                }\r",
+									"                            },\r",
+									"                            \"required\": [\r",
+									"                                \"id\",\r",
+									"                                \"name\"\r",
+									"                            ]\r",
+									"                        },\r",
+									"                        \"avatar\": {\r",
+									"                            \"type\": \"object\",\r",
+									"                            \"properties\": {\r",
+									"                                \"filename\": {\r",
+									"                                    \"type\": \"string\"\r",
+									"                                },\r",
+									"                                \"url\": {\r",
+									"                                    \"type\": \"string\"\r",
+									"                                }\r",
+									"                            },\r",
+									"                            \"required\": [\r",
+									"                                \"filename\",\r",
+									"                                \"url\"\r",
+									"                            ]\r",
+									"                        }\r",
+									"                    },\r",
+									"                    \"required\": [\r",
+									"                        \"id\",\r",
+									"                        \"name\",\r",
+									"                        \"email\",\r",
+									"                        \"phone_number\",\r",
+									"                        \"address\",\r",
+									"                        \"city\",\r",
+									"                        \"avatar\"\r",
+									"                    ]\r",
+									"                },\r",
+									"                \"images\": {\r",
+									"                    \"type\": \"array\",\r",
+									"                    \"properties\": {\r",
+									"                        \"id\": {\r",
+									"                            \"type\": \"string\"\r",
+									"                        },\r",
+									"                        \"filename\": {\r",
+									"                            \"type\": \"string\"\r",
+									"                        },\r",
+									"                        \"url\": {\r",
+									"                            \"type\": \"string\"\r",
+									"                        }\r",
+									"                    },\r",
+									"                    \"required\": [\r",
+									"                        \"id\",\r",
+									"                        \"filename\",\r",
+									"                        \"url\"\r",
+									"                    ]\r",
+									"                }\r",
+									"            },\r",
+									"        \"required\": [\r",
+									"            \"id\",\r",
+									"            \"name\",\r",
+									"            \"price\",\r",
+									"            \"description\",\r",
+									"            \"category_id\",\r",
+									"            \"user_id\",\r",
+									"            \"created_at\",\r",
+									"            \"updated_at\",\r",
+									"            \"url\",\r",
+									"            \"user\",\r",
+									"            \"images\"\r",
+									"        ]\r",
+									"        }\r",
+									"    },\r",
+									"    \"required\": [\r",
+									"        \"product\"\r",
+									"    ]\r",
+									"};\r",
+									"\r",
+									"pm.test('Schema validation', () => {\r",
+									"    pm.response.to.have.jsonSchema(schema);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"warning": "This is a duplicate header and will be overridden by the Content-Type header generated by Postman.",
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "product[name]",
+									"value": "Bangku lucu banget",
+									"type": "text"
+								},
+								{
+									"key": "product[price]",
+									"value": "19000",
+									"type": "text"
+								},
+								{
+									"key": "product[description]",
+									"value": "Bangku aneh aja",
+									"type": "text"
+								},
+								{
+									"key": "product[status]",
+									"value": "published",
+									"type": "text"
+								},
+								{
+									"key": "product[category_id]",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "product[images][]",
+									"type": "file",
+									"src": "710f4b0d6971497243139d0885ff8369.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base.url}}/products.json",
+							"host": [
+								"{{base.url}}"
+							],
+							"path": [
+								"products.json"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List Products",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Response time is less than 500ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response should have JSON Body\", function () { \r",
+									"    pm.response.to.have.jsonBody();\r",
+									"});\r",
+									"\r",
+									"var schema = {\r",
+									"    \"type\": \"object\",\r",
+									"    \"properties\": {\r",
+									"        \"product\": {\r",
+									"            \"type\": \"array\",\r",
+									"            \"properties\": {\r",
+									"                \"id\": {\r",
+									"                    \"type\": \"integer\"\r",
+									"                },\r",
+									"                \"name\": {\r",
+									"                    \"type\": \"string\"\r",
+									"                },\r",
+									"                \"price\": {\r",
+									"                    \"type\": \"integer\"\r",
+									"                },\r",
+									"                \"description\": {\r",
+									"                    \"type\": \"string\"\r",
+									"                },\r",
+									"                \"category_id\": {\r",
+									"                    \"type\": \"integer\"\r",
+									"                },\r",
+									"                \"user_id\": {\r",
+									"                    \"type\": \"integer\"\r",
+									"                },\r",
+									"                \"created_at\": {\r",
+									"                    \"type\": \"string\"\r",
+									"                },\r",
+									"                \"update_at\": {\r",
+									"                    \"type\": \"string\"\r",
+									"                },\r",
+									"                \"url\": {\r",
+									"                    \"type\": \"string\"\r",
+									"                },\r",
+									"                \"user\": {\r",
+									"                    \"type\": \"object\",\r",
+									"                    \"properties\": {\r",
+									"                        \"id\": {\r",
+									"                            \"type\": \"integer\"\r",
+									"                        },\r",
+									"                        \"name\": {\r",
+									"                            \"type\": \"string\"\r",
+									"                        },\r",
+									"                        \"email\": {\r",
+									"                            \"type\": \"string\"\r",
+									"                        },\r",
+									"                        \"phone_number\": {\r",
+									"                            \"type\": \"string\"\r",
+									"                        },\r",
+									"                        \"address\": {\r",
+									"                            \"type\": \"string\"\r",
+									"                        },\r",
+									"                        \"city\": {\r",
+									"                            \"type\": \"object\",\r",
+									"                            \"properties\": {\r",
+									"                                \"id\": {\r",
+									"                                    \"type\": \"integer\"\r",
+									"                                },\r",
+									"                                \"name\": {\r",
+									"                                    \"type\": \"string\"\r",
+									"                                }\r",
+									"                            },\r",
+									"                            \"required\": [\r",
+									"                                \"id\",\r",
+									"                                \"name\"\r",
+									"                            ]\r",
+									"                        },\r",
+									"                        \"avatar\": {\r",
+									"                            \"type\": \"object\",\r",
+									"                            \"properties\": {\r",
+									"                                \"filename\": {\r",
+									"                                    \"type\": \"string\"\r",
+									"                                },\r",
+									"                                \"url\": {\r",
+									"                                    \"type\": \"string\"\r",
+									"                                }\r",
+									"                            },\r",
+									"                            \"required\": [\r",
+									"                                \"filename\",\r",
+									"                                \"url\"\r",
+									"                            ]\r",
+									"                        }\r",
+									"                    },\r",
+									"                    \"required\": [\r",
+									"                        \"id\",\r",
+									"                        \"name\",\r",
+									"                        \"email\",\r",
+									"                        \"phone_number\",\r",
+									"                        \"address\",\r",
+									"                        \"city\",\r",
+									"                        \"avatar\"\r",
+									"                    ]\r",
+									"                },\r",
+									"                \"images\": {\r",
+									"                    \"type\": \"array\",\r",
+									"                    \"properties\": {\r",
+									"                        \"id\": {\r",
+									"                            \"type\": \"string\"\r",
+									"                        },\r",
+									"                        \"filename\": {\r",
+									"                            \"type\": \"string\"\r",
+									"                        },\r",
+									"                        \"url\": {\r",
+									"                            \"type\": \"string\"\r",
+									"                        }\r",
+									"                    },\r",
+									"                    \"required\": [\r",
+									"                        \"id\",\r",
+									"                        \"filename\",\r",
+									"                        \"url\"\r",
+									"                    ]\r",
+									"                }\r",
+									"            },\r",
+									"        \"required\": [\r",
+									"            \"id\",\r",
+									"            \"name\",\r",
+									"            \"price\",\r",
+									"            \"description\",\r",
+									"            \"category_id\",\r",
+									"            \"user_id\",\r",
+									"            \"created_at\",\r",
+									"            \"updated_at\",\r",
+									"            \"url\",\r",
+									"            \"user\",\r",
+									"            \"images\"\r",
+									"        ]\r",
+									"        }\r",
+									"    },\r",
+									"    \"required\": [\r",
+									"        \"products\"\r",
+									"    ]\r",
+									"};\r",
+									"\r",
+									"pm.test('Schema validation', () => {\r",
+									"    pm.response.to.have.jsonSchema(schema);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"category_id\": 1,\r\n  \"user_id\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base.url}}/products.json?page=1",
+							"host": [
+								"{{base.url}}"
+							],
+							"path": [
+								"products.json"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Product",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Response time is less than 500ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response should have JSON Body\", function () { \r",
+									"    pm.response.to.have.jsonBody();\r",
+									"});\r",
+									"\r",
+									"var schema = {\r",
+									"    \"type\": \"object\",\r",
+									"    \"properties\": {\r",
+									"        \"product\": {\r",
+									"            \"type\": \"object\",\r",
+									"            \"properties\": {\r",
+									"                \"id\": {\r",
+									"                    \"type\": \"integer\"\r",
+									"                },\r",
+									"                \"name\": {\r",
+									"                    \"type\": \"string\"\r",
+									"                },\r",
+									"                \"price\": {\r",
+									"                    \"type\": \"integer\"\r",
+									"                },\r",
+									"                \"description\": {\r",
+									"                    \"type\": \"string\"\r",
+									"                },\r",
+									"                \"category_id\": {\r",
+									"                    \"type\": \"integer\"\r",
+									"                },\r",
+									"                \"user_id\": {\r",
+									"                    \"type\": \"integer\"\r",
+									"                },\r",
+									"                \"created_at\": {\r",
+									"                    \"type\": \"string\"\r",
+									"                },\r",
+									"                \"update_at\": {\r",
+									"                    \"type\": \"string\"\r",
+									"                },\r",
+									"                \"url\": {\r",
+									"                    \"type\": \"string\"\r",
+									"                },\r",
+									"                \"user\": {\r",
+									"                    \"type\": \"object\",\r",
+									"                    \"properties\": {\r",
+									"                        \"id\": {\r",
+									"                            \"type\": \"integer\"\r",
+									"                        },\r",
+									"                        \"name\": {\r",
+									"                            \"type\": \"string\"\r",
+									"                        },\r",
+									"                        \"email\": {\r",
+									"                            \"type\": \"string\"\r",
+									"                        },\r",
+									"                        \"phone_number\": {\r",
+									"                            \"type\": \"string\"\r",
+									"                        },\r",
+									"                        \"address\": {\r",
+									"                            \"type\": \"string\"\r",
+									"                        },\r",
+									"                        \"city\": {\r",
+									"                            \"type\": \"object\",\r",
+									"                            \"properties\": {\r",
+									"                                \"id\": {\r",
+									"                                    \"type\": \"integer\"\r",
+									"                                },\r",
+									"                                \"name\": {\r",
+									"                                    \"type\": \"string\"\r",
+									"                                }\r",
+									"                            },\r",
+									"                            \"required\": [\r",
+									"                                \"id\",\r",
+									"                                \"name\"\r",
+									"                            ]\r",
+									"                        },\r",
+									"                        \"avatar\": {\r",
+									"                            \"type\": \"object\",\r",
+									"                            \"properties\": {\r",
+									"                                \"filename\": {\r",
+									"                                    \"type\": \"string\"\r",
+									"                                },\r",
+									"                                \"url\": {\r",
+									"                                    \"type\": \"string\"\r",
+									"                                }\r",
+									"                            },\r",
+									"                            \"required\": [\r",
+									"                                \"filename\",\r",
+									"                                \"url\"\r",
+									"                            ]\r",
+									"                        }\r",
+									"                    },\r",
+									"                    \"required\": [\r",
+									"                        \"id\",\r",
+									"                        \"name\",\r",
+									"                        \"email\",\r",
+									"                        \"phone_number\",\r",
+									"                        \"address\",\r",
+									"                        \"city\",\r",
+									"                        \"avatar\"\r",
+									"                    ]\r",
+									"                },\r",
+									"                \"images\": {\r",
+									"                    \"type\": \"array\",\r",
+									"                    \"properties\": {\r",
+									"                        \"id\": {\r",
+									"                            \"type\": \"string\"\r",
+									"                        },\r",
+									"                        \"filename\": {\r",
+									"                            \"type\": \"string\"\r",
+									"                        },\r",
+									"                        \"url\": {\r",
+									"                            \"type\": \"string\"\r",
+									"                        }\r",
+									"                    },\r",
+									"                }\r",
+									"            },\r",
+									"        \"required\": [\r",
+									"            \"id\",\r",
+									"            \"name\",\r",
+									"            \"price\",\r",
+									"            \"description\",\r",
+									"            \"category_id\",\r",
+									"            \"user_id\",\r",
+									"            \"created_at\",\r",
+									"            \"updated_at\",\r",
+									"            \"url\",\r",
+									"            \"user\",\r",
+									"            \"images\"\r",
+									"        ]\r",
+									"        }\r",
+									"    },\r",
+									"    \"required\": [\r",
+									"        \"product\"\r",
+									"    ]\r",
+									"};\r",
+									"\r",
+									"pm.test('Schema validation', () => {\r",
+									"    pm.response.to.have.jsonSchema(schema);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base.url}}/products/:id.json",
+							"host": [
+								"{{base.url}}"
+							],
+							"path": [
+								"products",
+								":id.json"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "51610"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Product",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Response time is less than 500ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"warning": "This is a duplicate header and will be overridden by the Content-Type header generated by Postman.",
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "product[name]",
+									"value": "Bangku keren banget",
+									"type": "text"
+								},
+								{
+									"key": "product[price]",
+									"value": "15000",
+									"type": "text"
+								},
+								{
+									"key": "product[description]",
+									"value": "keren banget bangkunya deh",
+									"type": "text"
+								},
+								{
+									"key": "product[status]",
+									"value": "published",
+									"type": "text"
+								},
+								{
+									"key": "product[category_id]",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "product[images][]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "product[persisted_images][]",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base.url}}/products/:id.json",
+							"host": [
+								"{{base.url}}"
+							],
+							"path": [
+								"products",
+								":id.json"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "51800"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Product",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Response time is less than 500ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Status code is 204\", function () {\r",
+									"    pm.response.to.have.status(204);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base.url}}/products/:id.json",
+							"host": [
+								"{{base.url}}"
+							],
+							"path": [
+								"products",
+								":id.json"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "51809"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Offers",
+			"item": [
+				{
+					"name": "Create Offer",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Response time is less than 500ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Status code is 201\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response should have JSON Body\", function () { \r",
+									"    pm.response.to.have.jsonBody();\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"offer\": {\r\n    \"price\": 1000,\r\n    \"to_id\": 1,\r\n    \"product_id\": 51384\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base.url}}/offers.json",
+							"host": [
+								"{{base.url}}"
+							],
+							"path": [
+								"offers.json"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List Offers",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Response time is less than 500ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response should have JSON Body\", function () {\r",
+									"    pm.response.to.have.jsonBody();\r",
+									"});\r",
+									"\r",
+									"var schema = {\r",
+									"    \"type\": \"object\",\r",
+									"    \"properties\": {\r",
+									"        \"offers\": {\r",
+									"            \"type\": \"array\"\r",
+									"        }\r",
+									"    },\r",
+									"    \"required\": [\r",
+									"        \"offers\"\r",
+									"    ]\r",
+									"};\r",
+									"\r",
+									"pm.test('Schema validation', function () {\r",
+									"    pm.response.to.have.jsonSchema(schema);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base.url}}/users/:user_id/offers.json",
+							"host": [
+								"{{base.url}}"
+							],
+							"path": [
+								"users",
+								":user_id",
+								"offers.json"
+							],
+							"variable": [
+								{
+									"key": "user_id",
+									"value": "87534"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Offer",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Response time is less than 500ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"offer\": {\r\n    \"status\": \"accepted\"\r\n  }\r\n}"
+						},
+						"url": {
+							"raw": "{{base.url}}/offers/:id.json",
+							"host": [
+								"{{base.url}}"
+							],
+							"path": [
+								"offers",
+								":id.json"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

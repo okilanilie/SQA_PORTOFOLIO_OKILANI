@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TCPRO005 - User update their address</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>5255fc77-ee63-4989-bf86-ae198448d8e1</testCaseGuid>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>01053082-d4ec-49db-be53-8fa15699f8b0</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>'jl.in aja walau susah'</defaultValue>
+      <description></description>
+      <id>01053082-d4ec-49db-be53-8fa15699f8b0</id>
+      <masked>false</masked>
+      <name>address</name>
+   </variable>
+</TestCaseEntity>

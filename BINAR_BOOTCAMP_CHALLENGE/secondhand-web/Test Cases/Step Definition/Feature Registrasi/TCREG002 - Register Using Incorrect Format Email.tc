@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TCREG002 - Register Using Incorrect Format Email</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>395f604d-2007-456e-a8c1-e2360411aea8</testCaseGuid>
+</TestCaseEntity>

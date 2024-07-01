@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TCREG008 - Register Without Input Address Field</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>1c23b61d-a122-4889-b3e9-c1cacd0415b6</testCaseGuid>
+</TestCaseEntity>

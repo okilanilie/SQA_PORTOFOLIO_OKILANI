@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TCPRO003 - User update their phone number</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>11a67fc5-6d9f-43b1-8dd3-48d293f098ba</testCaseGuid>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>5100a04a-cc13-436c-a383-c9bed58ccfa9</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>'1234567890'</defaultValue>
+      <description></description>
+      <id>5100a04a-cc13-436c-a383-c9bed58ccfa9</id>
+      <masked>false</masked>
+      <name>phone</name>
+   </variable>
+</TestCaseEntity>
